@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Steering System Works</title>
+        <link rel="stylesheet" href="src/style.css" />  </head>
+  <body class="bg-[#2A2A2A] text-white">
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <nav class="lg:hidden">
+      <div
+        class="bg-nav-bg h-18 flex justify-between items-center text-white">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            class="w-40"
+            alt="asd" />
+        </a>
+        <button id="menu-button"
+          class="text-3xl mr-6 text-gray-400">☰</button>
+      </div>
+      <div id="mob-nav" class="mob-nav bg-[#1F1F1F] w-full px-10"
+        style="max-height: 0px; overflow: hidden; transition: max-height 0.3s ease;">
+        <div class="flex flex-col">
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="../../index.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20">
+                  <path
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                  </path>
+                </svg>
+                <p class>Home</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+
+          <a
+            class="hover:bg-neutral-800  w-full  items-center gap-2 text-2xl text-gray-400 py-6"
+            href="src/pages/about.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6" fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <p class>About</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="categories.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path><path
+                    fill-rule="evenodd"
+                    d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6a1 1 0 011-1z"
+                    clip-rule="evenodd"></path></svg>
+                <p class>Categories</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+        </div>
+        <div class="border-t border-neutral-700"></div>
+        <div class="search my-8">
+          <form action method="GET"
+            class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full">
+            <img src="src/images/HomePage/icons/Icon-3.svg"
+              class="size-6 mt-2" alt>
+            <input type="search" placeholder="Search..."
+              class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
+          </form>
+        </div>
+        <div class="sign-buttons flex flex-col gap-6 mb-12">
+          <a href="login.html"
+            class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
+            In</a>
+          <a href="signup.html"
+            class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8">
+      <div class="left-nav flex-row items-center flex h-full">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            alt="asd" />
+        </a>
+        <div class="flex h-full items-center">
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="index.html">Home</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="src/pages/about.html">About</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="categories.html">Categories</a>
+        </div>
+      </div>
+      <div class="right-nav flex gap-4">
+        <form action method="GET"
+          class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64">
+          <img src="src/images/HomePage/icons/Icon-3.svg" alt>
+          <input type="search" placeholder="Search..."
+            class="focus:outline-none" />
+        </form>
+        <div class="sign-buttons flex gap-2">
+          <a href="src/pages/login.html"
+            class="rounded-full border-white border px-6 py-2.25 
+                            hover:bg-white hover:text-black">Sign In</a>
+          <a href="src/pages/signup.html"
+            class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+
+        <div class="sub-landing bg-black flex justify-between flex-col ">
+      <div
+        class="title flex flex-col gap-4 pl-8 lg:pl-16 pt-12 lg:pt-24 pr-4 pb-8 relative">
+        <p class="text-lg lg:text-2xl my-4 flex gap-5">
+          <a href="../../index.html">Home</a>
+          <span>/</span>
+          <a href="Transmission-Drivetrain.html">Transmission & Drivetrain</a>
+          <span>/</span>
+        </p>
+        <h1 class="text-4xl lg:text-7xl mb-20 lg:mb-48">
+
+          How the Steering System Works
+
+        </h1>
+        <div
+          class="size-24 lg:size-60  bg-primary rounded-tl-full absolute right-0 -bottom-0.5">
+        </div>
+      </div>
+      <div
+        class="yellow h-14 lg:h-20 flex flex-col lg:flex-row pl-8 lg:pl-8 lg:items-center"
+        style="background: linear-gradient(90deg, #FE9A00 0%, #FBBC05 100%);">
+        <p class="text-lg lg:text-3xl font-bold text-white">
+          The Video Course
+        </p>
+        <p class="lg:ml-4 lg:text-3xl">
+          teaches you every thing about modern cars
+        </p>
+      </div>
+    </div>
+
+
+    <div class="w-full py-16 px-6 md:px-16 lg:px-36 flex flex-col gap-8">
+
+      <p class="text-base md:text-lg lg:text-[20px]">The steering system
+        converts the rotation of the steering wheel into a swivelling movement
+        of the road wheels in such a way that the steering-wheel rim turns a
+        long way to move the road wheels a short way.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The system allows a driver
+        to use only light forces to steer a heavy car. The rim of a 15 in. (380
+        mm) diameter steering wheel moving four turns from full left lock to
+        full right lock travels nearly 16 ft (5 m), while the edge of a road
+        wheel moves a distance of only slightly more than 12 in. (300 mm). If
+        the driver swivelled the road wheel directly, he or she would have to
+        push nearly 16 times as hard.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The steering effort passes
+        to the wheels through a system of pivoted joints. These are designed to
+        allow the wheels to move up and down with the suspension without
+        changing the steering angle.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">They also ensure that when
+        cornering, the inner front wheel - which has to travel round a tighter
+        curve than the outer one - becomes more sharply angled.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The joints must be adjusted
+        very precisely, and even a little looseness in them makes the steering
+        dangerously sloppy and inaccurate.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">There are two steering
+        systems in common use - the rack and pinion and the steering box.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">On large cars, either
+        system may be power assisted to reduce further the effort needed to move
+        it, especially when the car is moving slowly.</p>
+
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">The
+        rack-and-pinion system</h2>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="flex flex-col gap-8 w-full lg:w-3/4">
+          <p class="text-base md:text-lg lg:text-[20px]">At the base of the
+            steering column there is a small pinion (gear wheel) inside a
+            housing. Its teeth mesh with a straight row of teeth on a rack - a
+            long transverse bar.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">Turning the pinion
+            makes the rack move from side to side. The ends of the rack are
+            coupled to the road wheels by track rods.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">This system is simple,
+            with few moving parts to become worn or displaced, so its action is
+            precise.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">A universal joint in
+            the steering column allows it to connect with the rack without
+            angling the steering wheel awkwardly sideways.</p>
+        </div>
+        <div class="flex flex-col gap-4 w-full lg:w-1/4">
+          <img src="src/images/steering & suspension/rack-and-pinion-gear 1.png"
+            alt class="w-full rounded-2xl max-h-96 object-contain">
+          <p class="text-base md:text-lg lg:text-[24px]">The pinion is closely
+            meshed with the rack, so that there is no backlash in the gears.
+            This gives very precise steering.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">The steering-box
+        system</h2>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="flex flex-col gap-8 w-full lg:w-3/4">
+          <p class="text-base md:text-lg lg:text-[20px]">At the base of the
+            steering column there is a worm gear inside a box. A worm is a
+            threaded cylinder like a short bolt. Imagine turning a bolt which
+            holding a nut on it; the nut would move along the bolt. In the same
+            way, turning the worm moves anything fitted into its thread.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">Depending on the
+            design, the moving part may be a sector (like a slice of a gear
+            wheel), a peg or a roller connected to a fork, or a large nut.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The nut system has
+            hardened balls running inside the thread between the worm and the
+            nut. As the nut moves, the balls roll out into a tube that takes
+            them back to the start; it is called a recirculating-ball
+            system.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The worm moves a drop
+            arm linked by a track rod to a steering arm that moves the nearest
+            front wheel.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">In recirculating-ball
+            steering, the thread between the worm and nut is filled with
+            balls.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">A central track rod
+            reaches to the other side of the car, where it is linked to the
+            other front wheel by another track rod and steering arm. A pivoted
+            idler arm holds the far end of the central track rod level. Arm
+            layouts vary.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The steering-box system
+            has many moving parts, so is less precise than the rack system,
+            there being more room for wear and displacement.</p>
+        </div>
+        <div class="flex flex-col gap-4 w-full lg:w-1/4">
+          <img
+            src="src/images/steering & suspension/the-steering-box-system--2 1.png"
+            alt class="w-full rounded-2xl max-h-96 object-contain">
+          <p class="text-base md:text-lg lg:text-[24px]">In worm-and-peg
+            steering the worm moves the drop arm by means of a peg connected to
+            a fork.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">Power-assisted
+        steering</h2>
+      <p class="text-base md:text-lg lg:text-[20px]">On a heavy car, either the
+        steering is heavy or it is inconveniently low geared - the steering
+        wheel requiring many turns from lock to lock.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">Heavy gearing can be
+        troublesome when parking in confined spaces. Power-assisted steering
+        overcomes the problem. The engine drives a pump that supplies oil under
+        high pressure to the rack or the steering box.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">Valves in the steering rack
+        or box open whenever the driver turns the wheel, allowing oil into the
+        cylinder. The oil works a piston that helps to push the steering in the
+        appropriate direction.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">As soon as the driver stops
+        turning the wheel, the valve shuts and the pushing action of the piston
+        stops.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The power only assists the
+        steering - the steering wheel is still linked to the road wheels in the
+        usual way.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="flex flex-col gap-4">
+          <img
+            src="src/images/steering & suspension/the-rack-and-pinion-system 1.png"
+            alt class="w-full rounded-2xl max-h-64 object-contain">
+          <p class="text-base md:text-lg lg:text-[24px]">A typical
+            rack-and-pinion steering layout, showing how the rack acts directly
+            on the road-wheel steering arms.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <img
+            src="src/images/steering & suspension/the-steering-box-system 1.png"
+            alt class="w-full rounded-2xl max-h-64 object-contain">
+        </div>
+        <div class="flex flex-col gap-4">
+          <img
+            src="src/images/steering & suspension/the-steering-box-system--3 1.png"
+            alt class="w-full rounded-2xl max-h-64 object-contain">
+          <p class="text-base md:text-lg lg:text-[24px]">In recirculating-ball
+            steering, the thread between the worm and nut is filled with
+            balls.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="bg-black text-gray-400">
+      <div class="max-w-screen-2xl mx-auto px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div
+              class="flex items-center gap-2 text-white text-xl font-semibold mb-4">
+              <span class="text-yellow-400">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-5.svg"
+                  alt>
+              </span>
+              CarXray
+            </div>
+            <p class="leading-relaxed mb-6 max-w-77.5 text-lg">A comprehensive
+              educational resource for understanding automotive systems,
+              repairs, and modifications.</p>
+            <div class="flex gap-3">
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-2.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-1.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5 w-6.5 block"
+                  src="src/images/HomePage/icons/Icon.svg" alt>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Learn</h3>
+                        <ul class="space-y-4">
+                            <li><a href="engine.html"
+                                    class="hover:text-white">
+                                    Engine
+                                </a></li>
+                            <li><a href="fuel system.html"
+                                    class="hover:text-white">
+                                    Fuel System
+                                </a></li>
+                            <li><a href="ignition-electrical.html"
+                                    class="hover:text-white">
+                                    Ignition & Electrical
+                                </a></li>
+                            <li><a href="cooling and heating.html"
+                                    class="hover:text-white">
+                                    Cooling & Heating
+                                </a></li>
+                            <li><a href="Transmission-Drivetrain.html"
+                                    class="hover:text-white">
+                                    Transmission
+                                </a></li>
+                            <li><a href="braking-system.html"
+                                    class="hover:text-white">
+                                    Brakes
+                                </a></li>
+                            <li><a href="Steering-Suspension.html"
+                                    class="hover:text-white">
+                                    Suspension & Steering
+                                </a></li>
+                        </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">All Articles</a></li>
+              <li><a href="#" class="hover:text-white">Video Tutorials</a></li>
+              <li><a href="#" class="hover:text-white">Repair Guides</a></li>
+              <li><a href="#" class="hover:text-white">Diagrams</a></li>
+              <li><a href="#" class="hover:text-white">Glossary</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">About</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">About This
+                  Project</a></li>
+              <li><a href="#" class="hover:text-white">How to Use</a></li>
+              <li><a href="#" class="hover:text-white">Contact Us</a></li>
+              <li><a href="#" class="hover:text-white">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-zinc-800 my-10"></div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>©️ 2025 CarXray. Graduation Project.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white">Privacy</a>
+            <a href="#" class="hover:text-white">Terms</a>
+            <a href="#" class="hover:text-white">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

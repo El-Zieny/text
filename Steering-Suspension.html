@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steering & Suspension</title>
+        <link rel="stylesheet" href="src/style.css" />  </head>
+  <body class="bg-[#2A2A2A] text-[#BFC7D5]">
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <nav class="lg:hidden">
+      <div
+        class="bg-nav-bg h-18 flex justify-between items-center text-white">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            class="w-40"
+            alt="asd" />
+        </a>
+        <button id="menu-button"
+          class="text-3xl mr-6 text-gray-400">☰</button>
+      </div>
+      <div id="mob-nav" class="mob-nav bg-[#1F1F1F] w-full px-10"
+        style="max-height: 0px; overflow: hidden; transition: max-height 0.3s ease;">
+        <div class="flex flex-col">
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="../../index.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20">
+                  <path
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                  </path>
+                </svg>
+                <p class>Home</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+
+          <a
+            class="hover:bg-neutral-800  w-full  items-center gap-2 text-2xl text-gray-400 py-6"
+            href="src/pages/about.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6" fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <p class>About</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="categories.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path><path
+                    fill-rule="evenodd"
+                    d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6a1 1 0 011-1z"
+                    clip-rule="evenodd"></path></svg>
+                <p class>Categories</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+        </div>
+        <div class="border-t border-neutral-700"></div>
+        <div class="search my-8">
+          <form action method="GET"
+            class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full">
+            <img src="src/images/HomePage/icons/Icon-3.svg"
+              class="size-6 mt-2" alt>
+            <input type="search" placeholder="Search..."
+              class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
+          </form>
+        </div>
+        <div class="sign-buttons flex flex-col gap-6 mb-12">
+          <a href="login.html"
+            class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
+            In</a>
+          <a href="signup.html"
+            class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8">
+      <div class="left-nav flex-row items-center flex h-full">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            alt="asd" />
+        </a>
+        <div class="flex h-full items-center">
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="index.html">Home</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="src/pages/about.html">About</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="categories.html">Categories</a>
+        </div>
+      </div>
+      <div class="right-nav flex gap-4">
+        <form action method="GET"
+          class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64">
+          <img src="src/images/HomePage/icons/Icon-3.svg" alt>
+          <input type="search" placeholder="Search..."
+            class="focus:outline-none" />
+        </form>
+        <div class="sign-buttons flex gap-2">
+          <a href="src/pages/login.html"
+            class="rounded-full border-white border px-6 py-2.25 
+                            hover:bg-white hover:text-black">Sign In</a>
+          <a href="src/pages/signup.html"
+            class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+
+    <div class="page flex flex-col lg:flex-row">
+
+      <!-- Sidebar - مخفي على الموبايل -->
+      <div
+        class="side-bar hidden lg:block border-r-[0.8px] border-gray-600 h-auto  px-8 pt-16">
+        <ul class="flex flex-col gap-5 text-xl">
+          <li><a
+              class="p-4 pl-6 w-75 inline-block border-l-3 border-transparent"
+              href="engine.html">Engine</a></li>
+          <li><a
+              class="p-4 pl-6 w-75 inline-block border-l-3 border-transparent"
+              href="fuel system.html">Fuel System</a></li>
+          <li><a
+              class="p-4 pl-6 w-75 inline-block border-l-3 border-transparent"
+              href="braking-system.html">Braking System</a></li>
+          <li><a
+              class="p-4 pl-6 w-75 inline-block border-l-3 border-transparent"
+              href="ignition-electrical.html">Ignition & Electrical
+              System</a></li>
+          <li><a
+              class="p-4 pl-6 w-75 inline-block border-l-3 border-transparent"
+              href="cooling and heating.html">cooling & Heating system</a></li>
+          <li><a
+              class="p-4 pl-6 w-75 inline-block border-l-3 border-transparent selected">Steering
+              & Suspension</a></li>
+          <li><a
+              class="p-4 pl-6 w-75 inline-block border-l-3 border-transparent"
+              href="transmission-drivetrain.html">Transmission &
+              Drivetrain</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile Sidebar dropdown -->
+      <div class="lg:hidden bg-[#1A1A1A] px-6 py-4">
+        <select onchange="window.location.href=this.value"
+          class="w-full bg-[#2A2A2A] text-white px-4 py-2 rounded-xl border border-gray-600 focus:outline-none">
+          <option value="engine.html">Engine</option>
+          <option value="fuel system.html">Fuel System</option>
+          <option value="braking-system.html">Braking System</option>
+          <option value="ignition-electrical.html">Ignition & Electrical
+            System</option>
+          <option value="cooling-heating.html">Cooling & Heating System</option>
+          <option value="Steering-Suspension.html" selected>Steering &
+            Suspension</option>
+          <option value="transmission-drivetrain.html">Transmission &
+            Drivetrain</option>
+        </select>
+      </div>
+
+      <div class="main-content w-full px-4 md:px-8 lg:px-18">
+
+        <div class="title-card w-full mt-8">
+          <div class="w-full flex flex-col xl:flex-row justify-between gap-4">
+            <div
+              class="xl:h-98 bg-black w-full xl:w-7/11 relative rounded-3xl xl:rounded-4xl overflow-hidden">
+
+              <img
+                src="src/images/steering & suspension/Image (Suspension).png"
+                class="xl:absolute mx-auto rounded-2xl object-cover w-auto xl:w-2/3 xl:h-auto h-full m-8 px-2 sm:p-0 xl:mt-12 xl:ml-4 2xl:ml-12 max-h-80"
+                alt>
+
+              <div
+                class="hidden xl:block h-48 w-36 absolute right-0 bg-[#2A2A2A] rounded-bl-4xl"></div>
+              <div
+                class="hidden xl:block h-6 w-6 absolute right-36 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden xl:block h-12 w-12 absolute right-36 bg-black rounded-full"></div>
+              <div
+                class="hidden xl:block h-6 w-6 absolute right-0 top-48 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden xl:block h-12 w-12 absolute top-48 right-0 bg-black rounded-full"></div>
+            </div>
+            <div
+              class="h-24 xl:h-98 w-full xl:w-4/12 bg-black relative rounded-3xl xl:rounded-4xl overflow-hidden">
+              <h2
+                class="text-xl xl:text-3xl m-6 xl:m-10 text-primary font-bold">
+
+                Steering & Suspension
+
+              </h2>
+              <div
+                class="hidden xl:block h-56 w-36 absolute left-0 bottom-0 bg-[#2A2A2A] rounded-tr-4xl"></div>
+              <div
+                class="hidden xl:block h-6 w-6 absolute left-36 bottom-0 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden xl:block h-12 w-12 absolute left-36 bottom-0 bg-black rounded-full"></div>
+              <div
+                class="hidden xl:block h-6 w-6 absolute left-0 bottom-56 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden xl:block h-12 w-12 absolute bottom-56 left-0 bg-black rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="title-card w-full mt-8">
+          <div class="w-full flex flex-col lg:flex-row justify-between gap-4">
+            <div
+              class="h-48 lg:h-98 bg-black w-full lg:w-7/11 relative rounded-3xl lg:rounded-4xl overflow-hidden">
+              <img
+                src="src/images/steering & suspension/Image (Suspension).png"
+                class="absolute rounded-2xl object-cover w-auto left-26 lg:w-auto lg:h-[213px] h-[140px] top-4 left-4 lg:top-10 lg:left-8"
+                alt>
+              <div
+                class="hidden lg:block h-48 w-36 absolute right-0 bg-[#2A2A2A] rounded-bl-4xl"></div>
+              <div
+                class="hidden lg:block h-6 w-6 absolute right-36 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden lg:block h-12 w-12 absolute right-36 bg-black rounded-full"></div>
+              <div
+                class="hidden lg:block h-6 w-6 absolute right-0 top-48 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden lg:block h-12 w-12 absolute top-48 right-0 bg-black rounded-full"></div>
+            </div>
+            <div
+              class="h-24 lg:h-98 w-full lg:w-4/12 bg-black relative rounded-3xl lg:rounded-4xl overflow-hidden">
+              <h2
+                class="text-xl lg:text-3xl m-6 lg:m-10 text-primary font-bold">Steering
+                & Suspension</h2>
+              <div
+                class="hidden lg:block h-56 w-36 absolute left-0 bottom-0 bg-[#2A2A2A] rounded-tr-4xl"></div>
+              <div
+                class="hidden lg:block h-6 w-6 absolute left-36 bottom-0 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden lg:block h-12 w-12 absolute left-36 bottom-0 bg-black rounded-full"></div>
+              <div
+                class="hidden lg:block h-6 w-6 absolute left-0 bottom-56 bg-[#2A2A2A]"></div>
+              <div
+                class="hidden lg:block h-12 w-12 absolute bottom-56 left-0 bg-black rounded-full"></div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="steering-cards mt-8 lg:mt-48">
+
+          <div class="rounded-3xl bg-black p-6 lg:p-8 mb-8">
+            <p class="text-[#FFA500] text-sm font-semibold mb-4">BASICS</p>
+            <a href="how-steering-works.html"
+              class="text-[#FFA500] text-lg lg:text-xl font-semibold mb-4 block">How
+              the Steering System Works</a>
+            <p class="text-[#BFC7D5] mb-6 text-sm lg:text-base">The steering
+              system converts the rotation of the steering wheel into a
+              swivelling movement of the road wheels in such a way that the
+              steering-wheel rim turns a long way to move the road wheels a
+              short way.</p>
+            <a href="how-steering-works.html"
+              class="text-[#FFA500] font-semibold">Read more ></a>
+          </div>
+
+          <div class="rounded-3xl bg-black p-6 lg:p-8 mb-8">
+            <p class="text-[#FFA500] text-sm font-semibold mb-4">BASICS</p>
+            <a href="how-suspension-works.html"
+              class="text-[#FFA500] text-lg lg:text-xl font-semibold mb-4 block">How
+              Car Suspension Works</a>
+            <p class="text-[#BFC7D5] mb-6 text-sm lg:text-base">There are
+              various ways of attaching the wheels of the car so that they can
+              move up and down on their springs and dampers, and do so with as
+              little change as possible in the distance between adjacent
+              wheels.</p>
+            <a href="how-suspension-works.html"
+              class="text-[#FFA500] font-semibold">Read more ></a>
+          </div>
+
+          <div class="rounded-3xl bg-black p-6 lg:p-8 mb-8">
+            <p class="text-[#FFA500] text-sm font-semibold mb-4">BASICS</p>
+            <a href="how-springs-dampers-work.html"
+              class="text-[#FFA500] text-lg lg:text-xl font-semibold mb-4 block">How
+              Car Springs and Dampers Work</a>
+            <p class="text-[#BFC7D5] mb-6 text-sm lg:text-base">The suspension
+              system affects both the driver's control of the car and the
+              comfort of the occupants. The springs allow the wheels to move up
+              to absorb bumps in the road and reduce jolting, while the dampers
+              prevent bouncing.</p>
+            <a href="how-springs-dampers-work.html"
+              class="text-[#FFA500] font-semibold">Read more ></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-black text-gray-400">
+      <div class="max-w-screen-2xl mx-auto px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div
+              class="flex items-center gap-2 text-white text-xl font-semibold mb-4">
+              <span class="text-yellow-400">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-5.svg"
+                  alt>
+              </span>
+              CarXray
+            </div>
+            <p class="leading-relaxed mb-6 max-w-77.5 text-lg">A comprehensive
+              educational resource for understanding automotive systems,
+              repairs, and modifications.</p>
+            <div class="flex gap-3">
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-2.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-1.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5 w-6.5 block"
+                  src="src/images/HomePage/icons/Icon.svg" alt>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Learn</h3>
+                        <ul class="space-y-4">
+                            <li><a href="engine.html"
+                                    class="hover:text-white">
+                                    Engine
+                                </a></li>
+                            <li><a href="fuel system.html"
+                                    class="hover:text-white">
+                                    Fuel System
+                                </a></li>
+                            <li><a href="ignition-electrical.html"
+                                    class="hover:text-white">
+                                    Ignition & Electrical
+                                </a></li>
+                            <li><a href="cooling and heating.html"
+                                    class="hover:text-white">
+                                    Cooling & Heating
+                                </a></li>
+                            <li><a href="Transmission-Drivetrain.html"
+                                    class="hover:text-white">
+                                    Transmission
+                                </a></li>
+                            <li><a href="braking-system.html"
+                                    class="hover:text-white">
+                                    Brakes
+                                </a></li>
+                            <li><a href="Steering-Suspension.html"
+                                    class="hover:text-white">
+                                    Suspension & Steering
+                                </a></li>
+                        </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">All Articles</a></li>
+              <li><a href="#" class="hover:text-white">Video Tutorials</a></li>
+              <li><a href="#" class="hover:text-white">Repair Guides</a></li>
+              <li><a href="#" class="hover:text-white">Diagrams</a></li>
+              <li><a href="#" class="hover:text-white">Glossary</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">About</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">About This
+                  Project</a></li>
+              <li><a href="#" class="hover:text-white">How to Use</a></li>
+              <li><a href="#" class="hover:text-white">Contact Us</a></li>
+              <li><a href="#" class="hover:text-white">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-zinc-800 my-10"></div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>©️ 2025 CarXray. Graduation Project.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white">Privacy</a>
+            <a href="#" class="hover:text-white">Terms</a>
+            <a href="#" class="hover:text-white">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

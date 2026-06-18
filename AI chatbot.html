@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car X-Ray AI Assistant</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="chat-page text-white flex flex-col h-screen overflow-hidden">
+    <!-- Header -->
+    <header
+      class="chat-header shrink-0 top-0 right-0 left-0 bg-[#2A2A2A] h-20 flex items-center justify-around border-b border-gray-800 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)]"
+    >
+      <div
+        class="chat-header-inner flex items-center justify-between px-4 lg:px-12 w-full"
+      >
+        <a
+          href="../../index.html"
+          class="text-gray-400 hover:text-white bg-black p-3 rounded-md"
+        >
+          <img
+            class="h-5 lg:h-6 w-5 lg:w-6"
+            src="src/images/ai/Icon (1).svg"
+            alt
+          />
+        </a>
+
+        <div class="chat-brand flex items-center gap-2">
+          <div class="chat-brand-icon bg-yellow-400 rounded-full p-2">
+            <img
+              class="w-8 lg:w-10 h-8 lg:h-10"
+              src="src/images/ai/Icon.svg"
+              alt
+            />
+          </div>
+          <div class="chat-brand-text">
+            <h1 class="lg:text-lg font-bold">Car X-Ray AI Assistant</h1>
+            <p class="text-xs lg:text-sm text-gray-400">
+              Ask me anything about cars
+            </p>
+          </div>
+        </div>
+
+        <div></div>
+        <!-- <button
+          class="chat-header-btn text-gray-400 hover:text-white bg-black p-3 rounded-md"
+        >
+          <img
+            class="h-5 lg:h-6 w-5 lg:w-6"
+            src="src/images/ai/Icon (2).svg"
+            alt
+          />
+        </button> -->
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main
+      class="ai-chatbot flex-1 flex flex-col items-center px-6 py-4 justify-self-center lg:py-12 overflow-hidden min-h-0"
+    >
+      <div
+        id="welcome-section"
+        class="flex flex-col gap-4 items-center px-6 py-4 justify-self-center lg:py-12 overflow-hidden min-h-0"
+      >
+        <!-- Icon -->
+        <div
+          class="welcome-icon w-fit self-center bg-yellow-400 rounded-full p-4 flex items-center justify-center"
+        >
+          <img
+            src="src/images/ai/Icon.svg"
+            alt="AI Icon"
+            class="h-18 w-18 lg:h-24 lg:w-24 pl-0.5 pb-1"
+          />
+        </div>
+
+        <!-- Welcome Text -->
+        <h2 class="text-4xl font-bold text-center">
+          Welcome to<br />
+          Car X-Ray AI
+        </h2>
+        <p class="text-center text-gray-400 max-w-4xl">
+          I'm your automotive expert assistant. Ask me anything about car parts,
+          maintenance, repairs, or how cars work. I'm here to help make car
+          knowledge simple and accessible!
+        </p>
+
+        <!-- Suggestion Buttons -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl">
+          <button
+            class="suggestion-btn bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition"
+          >
+            How does an engine work?
+          </button>
+          <button
+            class="suggestion-btn bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition"
+          >
+            What causes brake squeaking?
+          </button>
+          <button
+            class="suggestion-btn bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition"
+          >
+            When should I change my oil?
+          </button>
+          <button
+            class="suggestion-btn bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition"
+          >
+            Explain car transmission types
+          </button>
+        </div>
+      </div>
+      <div
+        id="chatMessages"
+        class="w-full max-w-4xl flex flex-1 flex-col gap-4 overflow-y-auto wrap-break-word"
+      ></div>
+    </main>
+
+    <!-- Footer / Input Area -->
+    <footer
+      class="chat-footer shrink-0 bottom-0 bg-[#2A2A2A] border-t border-gray-700 px-4 lg:px-6 py-4"
+    >
+      <div class="chat-input-row flex gap-3 max-w-4xl mx-auto mb-3">
+        <textarea
+          id="userInput"
+          rows="1"
+          placeholder="Ask me anything about cars..."
+          class="chat-textarea flex-1 bg-gray-700 text-white min-w-0 placeholder-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+        ></textarea>
+        <button
+          id="sendBtn"
+          disabled
+          class="chat-send-btn bg-yellow-400 disabled:bg-neutral-500 hover:bg-yellow-500 text-white font-bold py-3 px-2 lg:px-6 rounded-lg transition flex items-center gap-2"
+        >
+          <span class="send-label">Send</span>
+          <img
+            src="src/images/ai/Icon (3).svg"
+            alt="Send Icon"
+            class="h-6 w-6"
+          />
+        </button>
+      </div>
+      <p class="text-center text-xs text-gray-500">
+        AI responses are for educational purposes. Always consult a professional
+        mechanic for repairs.
+      </p>
+    </footer>
+
+    <script>
+      const input = document.getElementById("userInput");
+      const sendBtn = document.getElementById("sendBtn");
+      const chatMessages = document.getElementById("chatMessages");
+      const welcomeSection = document.getElementById("welcome-section");
+
+      // send on button click
+      sendBtn.addEventListener("click", sendMessage);
+
+      // send on Enter, keep Shift+Enter for multi-line questions
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+
+      async function sendMessage() {
+        const message = input.value.trim();
+
+        if (!message) return;
+
+        // hide welcome section on first message
+        welcomeSection.style.display = "none";
+        // show user message
+        addMessage(message, "user");
+
+        // clear input
+        input.value = "";
+        resizeInput();
+
+        // disable send button
+        toggleSendButton();
+
+        // loading message
+        const loadingMessage = addMessage("Typing...", "ai");
+
+        try {
+          const response = await fetch('https://backend-project1-production.up.railway.app/chat', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${localStorage.getItem('jwt')}`  // لو فيه login
+          },
+          body: JSON.stringify({ message: message })
+          });
+
+          const data = await response.json();
+
+
+          if (!response.ok) {
+            throw new Error(data.error?.message || "Request failed");
+          }
+
+          const aiReply = data.reply;
+          console.log(data);
+
+          loadingMessage.remove();
+
+          addMessage(aiReply, "ai");
+        } catch (error) {
+          console.error(error);
+
+          loadingMessage.remove();
+
+          addMessage(error.message, "ai");
+        }
+      }
+
+      function addMessage(text, sender) {
+        const row = document.createElement("div");
+        const avatar = document.createElement("div");
+        const div = document.createElement("div");
+
+        row.className =
+          sender === "user" ? "message-row user" : "message-row ai";
+
+        avatar.className =
+          sender === "user" ? "message-avatar user" : "message-avatar ai";
+
+        avatar.innerHTML =
+          sender === "user"
+            ? `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>`
+            : `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <path d="M24 16V8H16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M36 16H12C9.79086 16 8 17.7909 8 20V36C8 38.2091 9.79086 40 12 40H36C38.2091 40 40 38.2091 40 36V20C40 17.7909 38.2091 16 36 16Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 28H8" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M40 28H44" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30 26V30" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 26V30" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>`;
+
+        div.className =
+          sender === "user"
+            ? "message-bubble bg-yellow-400 text-black p-4 rounded-xl"
+            : "message-bubble bg-gray-700 text-white p-4 rounded-xl";
+
+        div.textContent = text;
+
+        row.appendChild(avatar);
+        row.appendChild(div);
+        chatMessages.appendChild(row);
+
+        requestAnimationFrame(() => {
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+
+        return row;
+      }
+      const suggestionButtons = document.querySelectorAll(".suggestion-btn");
+
+      suggestionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          input.value = button.textContent.trim();
+          resizeInput();
+
+          sendMessage();
+        });
+      });
+      function toggleSendButton() {
+        if (input.value.trim() === "") {
+          sendBtn.disabled = true;
+        } else {
+          sendBtn.disabled = false;
+        }
+      }
+      input.addEventListener("input", toggleSendButton);
+      input.value = "";
+      toggleSendButton();
+      resizeInput();
+
+      function resizeInput() {
+        const maxInputHeight = window.matchMedia("(max-width: 640px)").matches
+          ? 120
+          : 144;
+
+        input.style.height = "auto";
+
+        input.style.height =
+          Math.min(input.scrollHeight, maxInputHeight) + "px";
+      }
+
+      input.addEventListener("input", resizeInput);
+      window.addEventListener("resize", resizeInput);
+      resizeInput();
+    </script>
+  </body>
+</html>

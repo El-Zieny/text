@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the Transmission Works</title>
+        <link rel="stylesheet" href="src/style.css" />  </head>
+  <body class="bg-[#2A2A2A] text-white">
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <nav class="lg:hidden">
+      <div
+        class="bg-nav-bg h-18 flex justify-between items-center text-white">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            class="w-40"
+            alt="asd" />
+        </a>
+        <button id="menu-button"
+          class="text-3xl mr-6 text-gray-400">☰</button>
+      </div>
+      <div id="mob-nav" class="mob-nav bg-[#1F1F1F] w-full px-10"
+        style="max-height: 0px; overflow: hidden; transition: max-height 0.3s ease;">
+        <div class="flex flex-col">
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="../../index.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20">
+                  <path
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                  </path>
+                </svg>
+                <p class>Home</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+
+          <a
+            class="hover:bg-neutral-800  w-full  items-center gap-2 text-2xl text-gray-400 py-6"
+            href="src/pages/about.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6" fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <p class>About</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="categories.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path><path
+                    fill-rule="evenodd"
+                    d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6a1 1 0 011-1z"
+                    clip-rule="evenodd"></path></svg>
+                <p class>Categories</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+        </div>
+        <div class="border-t border-neutral-700"></div>
+        <div class="search my-8">
+          <form action method="GET"
+            class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full">
+            <img src="src/images/HomePage/icons/Icon-3.svg"
+              class="size-6 mt-2" alt>
+            <input type="search" placeholder="Search..."
+              class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
+          </form>
+        </div>
+        <div class="sign-buttons flex flex-col gap-6 mb-12">
+          <a href="login.html"
+            class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
+            In</a>
+          <a href="signup.html"
+            class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8">
+      <div class="left-nav flex-row items-center flex h-full">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            alt="asd" />
+        </a>
+        <div class="flex h-full items-center">
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="index.html">Home</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="src/pages/about.html">About</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="categories.html">Categories</a>
+        </div>
+      </div>
+      <div class="right-nav flex gap-4">
+        <form action method="GET"
+          class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64">
+          <img src="src/images/HomePage/icons/Icon-3.svg" alt>
+          <input type="search" placeholder="Search..."
+            class="focus:outline-none" />
+        </form>
+        <div class="sign-buttons flex gap-2">
+          <a href="src/pages/login.html"
+            class="rounded-full border-white border px-6 py-2.25 
+                            hover:bg-white hover:text-black">Sign In</a>
+          <a href="src/pages/signup.html"
+            class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+
+
+        <div class="sub-landing bg-black flex justify-between flex-col ">
+      <div
+        class="title flex flex-col gap-4 pl-8 lg:pl-16 pt-12 lg:pt-24 pr-4 pb-8 relative">
+        <p class="text-lg lg:text-2xl my-4 flex gap-5">
+          <a href="../../index.html">Home</a>
+          <span>/</span>
+          <a href="Transmission-Drivetrain.html">Transmission & Drivetrain</a>
+          <span>/</span>
+        </p>
+        <h1 class="text-4xl lg:text-7xl mb-20 lg:mb-48">
+
+          How the Transmission Works
+
+        </h1>
+        <div
+          class="size-24 lg:size-60  bg-primary rounded-tl-full absolute right-0 -bottom-0.5">
+        </div>
+      </div>
+      <div
+        class="yellow h-14 lg:h-20 flex flex-col lg:flex-row pl-8 lg:pl-8 lg:items-center"
+        style="background: linear-gradient(90deg, #FE9A00 0%, #FBBC05 100%);">
+        <p class="text-lg lg:text-3xl font-bold text-white">
+          The Video Course
+        </p>
+        <p class="lg:ml-4 lg:text-3xl">
+          teaches you every thing about modern cars
+        </p>
+      </div>
+    </div>
+
+
+    <div class="w-full py-16 px-6 md:px-16 lg:px-36 flex flex-col gap-8">
+
+      <!-- Section 1 -->
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">Driving through
+        a propeller shaft</h2>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="w-full lg:w-2/3 flex flex-col gap-4">
+          <p class="text-base md:text-lg lg:text-[20px]">In a front-engined
+            rear-wheel-drive car, power is transmitted from the engine through
+            the clutch and the gearbox to the rear axle by means of a tubular
+            propeller shaft.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The rear axle must be
+            able to move up and down on the suspension according to variations
+            of the road surface.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The movement causes the
+            angle of the propeller shaft, and the distance between the gearbox
+            and the rear axle, to change constantly.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">To allow for the
+            constant movement, splines on the front end of the propeller shaft
+            slide in and out of the gearbox as the distance changes; the shaft
+            also has universal joints at each end, and sometimes in the
+            middle.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The universal joints
+            allow the propeller shaft to be flexible, while constantly
+            transmitting power.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The last part of the
+            transmission is the final drive, which incorporates the differential
+            and is sometimes called the differential.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The differential has
+            three functions: to turn the direction of drive through 90 degrees
+            to the rear wheels; to allow either rear wheel to turn faster than
+            the other when cornering; and to effect a final gear reduction.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">A pinion gear inside
+            the differential is driven by the propeller shaft and has its gears
+            bevelled - cut at an angle. It meshes with a bevelled crown wheel so
+            that the two gears form a 90 degree angle. The commonest type of
+            universal joint, the Hooke joint, uses a cross-shaped 'spider'
+            across the axis of the drive shaft. The 'spider' runs on
+            needle-roller bearings to minimise friction.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The crown wheel usually
+            has about four times as many teeth as the pinion gear, causing the
+            wheels to turn at a quarter the propeller-shaft speed.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The drive is
+            transmitted from the differential to the rear wheels by means of
+            half shafts, or drive shafts.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">At the differential end
+            of each half shaft, a bevelled pinion gear is connected to the crown
+            wheel by means of an intermediate set of bevel pinions.</p>
+        </div>
+        <div class="w-full lg:w-1/3 flex flex-col gap-4">
+          <h3 class="text-xl md:text-2xl font-bold">Universal joint</h3>
+          <!-- صورة Universal joint هنا -->
+          <img src="src/images/transmission-drivetrain/universal-joint 1.png" alt
+            class="w-full rounded-2xl max-h-96 object-contain">
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">Driving through
+        the front wheels</h2>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="w-full lg:w-2/3 flex flex-col gap-4">
+          <p class="text-base md:text-lg lg:text-[20px]">Front-wheel-drive cars
+            use the same transmission principles as rear-wheel-drive cars, but
+            the mechanical components vary in design according to the engine and
+            gearbox layout.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">Transverse engines are
+            normally mounted directly above the gearbox, and power is
+            transmitted through the clutch to the gearbox by a train of
+            gears.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">In this
+            front-wheel-drive layout the gearbox is in the conventional
+            position, at the rear of the engine.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">In-line engines are
+            mated directly to the gearbox, and drive passes through the clutch
+            in the normal manner.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">In both cases, drive
+            passes from the gearbox to a final-drive unit.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">In a transverse-mounted
+            engine, the final-drive unit is usually located in the gearbox. In
+            an in-line engine, it is usually mounted between the engine and the
+            gearbox.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">Power is taken from the
+            final-drive unit to the wheels by short drive shafts. To cope with
+            suspension and steering movement in the wheels, the drive shafts use
+            a highly developed type of universal joint called a
+            constant-velocity (CV) joint.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">A CV joint uses grooves
+            with steel ball bearings in them instead of the 'spider' found in a
+            universal joint, and transmits power at a constant speed, regardless
+            of the angle and the distance between the final-drive unit and the
+            wheels.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">Some cars, such as
+            earlier Minis, also have drive-shaft couplings which are 'spider'
+            joints, and do the same job as universal joints in rear-wheel-drive
+            cars, allowing up-and-down movement of the suspension. They are
+            usually made of rubber bonded to metal.</p>
+        </div>
+        <div class="w-full lg:w-1/3 flex flex-col gap-4">
+          <h3 class="text-xl md:text-2xl font-bold">In-line engine</h3>
+          <!-- صورة In-line engine هنا -->
+          <img
+            src="src/images/transmission-drivetrain/in-this-front-wheel-drive-layout-the-gearbox-is-in-the-conventional-position-at-the-rear-of-the-engine 1.png"
+            alt class="w-full rounded-2xl max-h-96 object-contain">
+          <!-- صورة CV joint هنا -->
+          <img src="src/images/transmission-drivetrain/final-drive 1.png" alt
+            class="w-full rounded-2xl max-h-96 object-contain">
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">Rear engine
+        driving rear wheels</h2>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="w-full lg:w-1/2 flex flex-col gap-4">
+          <!-- صورة CV joint steel balls هنا -->
+          <img
+            src="src/images/transmission-drivetrain/constant-velocity-cv-joint 1.png"
+            alt class="w-full rounded-2xl max-h-96 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">Some cars, such as VW
+            Beetles and smaller Fiats, have rear-mounted engines and gearboxes,
+            driving the rear wheels.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">Power is transmitted
+            through the clutch to the gearbox, passing to the wheels through
+            drive shafts.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">The layout is similar
+            to some frontwheel-drive cars, except that no allowance need be made
+            for steering movement of the wheels.</p>
+          <p class="text-base md:text-lg lg:text-[20px]">Sometimes the shafts
+            are connected to the flanges at the gearbox by 'doughnut'
+            couplings.</p>
+        </div>
+        <div class="w-full lg:w-1/2 flex flex-col gap-4">
+          <!-- صورة rear engine car هنا -->
+          <img src="src/images/transmission-drivetrain/transverse-engine 1.png"
+            alt class="w-full rounded-2xl max-h-96 object-contain">
+          <!-- صورة rear engine layout هنا -->
+          <img
+            src="src/images/transmission-drivetrain/front-engine-rear-drive 1.png"
+            alt class="w-full rounded-2xl max-h-96 object-contain">
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="bg-black text-gray-400">
+      <div class="max-w-screen-2xl mx-auto px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div
+              class="flex items-center gap-2 text-white text-xl font-semibold mb-4">
+              <span class="text-yellow-400">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-5.svg"
+                  alt>
+              </span>
+              CarXray
+            </div>
+            <p class="leading-relaxed mb-6 max-w-77.5 text-lg">A comprehensive
+              educational resource for understanding automotive systems,
+              repairs, and modifications.</p>
+            <div class="flex gap-3">
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-2.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-1.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5 w-6.5 block"
+                  src="src/images/HomePage/icons/Icon.svg" alt>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Learn</h3>
+                        <ul class="space-y-4">
+                            <li><a href="engine.html"
+                                    class="hover:text-white">
+                                    Engine
+                                </a></li>
+                            <li><a href="fuel system.html"
+                                    class="hover:text-white">
+                                    Fuel System
+                                </a></li>
+                            <li><a href="ignition-electrical.html"
+                                    class="hover:text-white">
+                                    Ignition & Electrical
+                                </a></li>
+                            <li><a href="cooling and heating.html"
+                                    class="hover:text-white">
+                                    Cooling & Heating
+                                </a></li>
+                            <li><a href="Transmission-Drivetrain.html"
+                                    class="hover:text-white">
+                                    Transmission
+                                </a></li>
+                            <li><a href="braking-system.html"
+                                    class="hover:text-white">
+                                    Brakes
+                                </a></li>
+                            <li><a href="Steering-Suspension.html"
+                                    class="hover:text-white">
+                                    Suspension & Steering
+                                </a></li>
+                        </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">All Articles</a></li>
+              <li><a href="#" class="hover:text-white">Video Tutorials</a></li>
+              <li><a href="#" class="hover:text-white">Repair Guides</a></li>
+              <li><a href="#" class="hover:text-white">Diagrams</a></li>
+              <li><a href="#" class="hover:text-white">Glossary</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">About</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">About This
+                  Project</a></li>
+              <li><a href="#" class="hover:text-white">How to Use</a></li>
+              <li><a href="#" class="hover:text-white">Contact Us</a></li>
+              <li><a href="#" class="hover:text-white">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-zinc-800 my-10"></div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>©️ 2025 carXray. Graduation Project.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white">Privacy</a>
+            <a href="#" class="hover:text-white">Terms</a>
+            <a href="#" class="hover:text-white">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

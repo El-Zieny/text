@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How an Engine Cooling System Works</title>
+        <link rel="stylesheet" href="src/style.css" />  </head>
+  <body class="bg-[#2A2A2A] text-white">
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <nav class="lg:hidden">
+      <div
+        class="bg-nav-bg h-18 flex justify-between items-center text-white">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            class="w-40"
+            alt="asd" />
+        </a>
+        <button id="menu-button"
+          class="text-3xl mr-6 text-gray-400">☰</button>
+      </div>
+      <div id="mob-nav" class="mob-nav bg-[#1F1F1F] w-full px-10"
+        style="max-height: 0px; overflow: hidden; transition: max-height 0.3s ease;">
+        <div class="flex flex-col">
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="../../index.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20">
+                  <path
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                  </path>
+                </svg>
+                <p class>Home</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+
+          <a
+            class="hover:bg-neutral-800  w-full  items-center gap-2 text-2xl text-gray-400 py-6"
+            href="src/pages/about.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6" fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <p class>About</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="categories.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path><path
+                    fill-rule="evenodd"
+                    d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6a1 1 0 011-1z"
+                    clip-rule="evenodd"></path></svg>
+                <p class>Categories</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+        </div>
+        <div class="border-t border-neutral-700"></div>
+        <div class="search my-8">
+          <form action method="GET"
+            class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full">
+            <img src="src/images/HomePage/icons/Icon-3.svg"
+              class="size-6 mt-2" alt>
+            <input type="search" placeholder="Search..."
+              class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
+          </form>
+        </div>
+        <div class="sign-buttons flex flex-col gap-6 mb-12">
+          <a href="login.html"
+            class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
+            In</a>
+          <a href="signup.html"
+            class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8">
+      <div class="left-nav flex-row items-center flex h-full">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            alt="asd" />
+        </a>
+        <div class="flex h-full items-center">
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="index.html">Home</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="src/pages/about.html">About</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="categories.html">Categories</a>
+        </div>
+      </div>
+      <div class="right-nav flex gap-4">
+        <form action method="GET"
+          class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64">
+          <img src="src/images/HomePage/icons/Icon-3.svg" alt>
+          <input type="search" placeholder="Search..."
+            class="focus:outline-none" />
+        </form>
+        <div class="sign-buttons flex gap-2">
+          <a href="src/pages/login.html"
+            class="rounded-full border-white border px-6 py-2.25 
+                            hover:bg-white hover:text-black">Sign In</a>
+          <a href="src/pages/signup.html"
+            class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+
+    <div class="sub-landing bg-black flex justify-between flex-col ">
+      <div
+        class="title flex flex-col gap-4 pl-8 lg:pl-16 pt-12 lg:pt-24 pr-4 pb-8 relative">
+        <p class="text-lg lg:text-2xl my-4 flex gap-5">
+          <a href="../../index.html">Home</a>
+          <span>/</span>
+          <a href="cooling and heating.html">Cooling and Heating</a>
+          <span>/</span>
+        </p>
+        <h1 class="text-4xl lg:text-7xl mb-20 lg:mb-48">
+          How an engine cooling system works
+        </h1>
+        <div
+          class="size-24 lg:size-60  bg-primary rounded-tl-full absolute right-0 -bottom-0.5">
+        </div>
+      </div>
+      <div
+        class="yellow h-14 lg:h-20 flex flex-col lg:flex-row pl-8 lg:pl-8 lg:items-center"
+        style="background: linear-gradient(90deg, #FE9A00 0%, #FBBC05 100%);">
+        <p class="text-lg lg:text-3xl font-bold text-white">
+          The Video Course
+        </p>
+        <p class="lg:ml-4 lg:text-3xl">
+          teaches you every thing about modern cars
+        </p>
+      </div>
+    </div>
+
+    <div class="w-full p-6 lg:p-16 flex flex-col gap-8">
+      <p class="text-2xl leading-14">
+        A car engine produces a lot of heat when it is running, and must be
+        cooled continuously to avoid engine damage.<br />
+        Generally this is done by circulating coolant liquid usually water mixed
+        with an antifreeze solution through special cooling passages. Some
+        engines are cooled by air flowing over finned cylinder casings.
+      </p>
+      <h2 class="text-4xl">
+        How the coolant circulates
+      </h2>
+      <div class="w-10/12">
+        <img
+          src="src/images/cool and heating/how-the-coolant-circulates 1.png"
+          alt="coolant-circulates">
+        <p class="text-xl px-2">
+          A typical water-cooling system with an engine-driven fan: note the
+          bypass hose taking off hot coolant for the heater.<br /> The pressure
+          cap on
+          the expansion tank has a spring-loaded valve which opens above a
+          certain pressure.
+        </p>
+      </div>
+      <h2 class="text-4xl">
+        A water-cooled cooling system
+      </h2>
+      <p class="text-2xl leading-14">
+        A water-cooled engine block and cylinder head have interconnected
+        coolant channels running through them. At the top of the cylinder head
+        all the channels converge to a single outlet.<br />
+        A pump , driven by a pulley and belt from the crankshaft , drives hot
+        coolant out of the engine to the radiator , which is a form of heat
+        exchanger .<br />
+        Unwanted heat is passed from the radiator into the air stream, and the
+        cooled liquid then returns to an inlet at the bottom of the block and
+        flows back into the channels again.<br />
+        Usually the pump sends coolant up through the engine and down through
+        the radiator, taking advantage of the fact that hot water expands,
+        becomes lighter and rises above cool water when heated. Its natural
+        tendency is to flow upwards, and the pump assists circulation.<br />
+        The radiator is linked to the engine by rubber hoses , and has a top and
+        bottom tank connected by a core a bank of many fine tubes.<br />
+        The tubes pass through holes in a stack of thin sheet-metal fins, so
+        that the core has a very large surface area and can lose heat rapidly to
+        the cooler air passing through it.<br />
+        On older cars the tubes run vertically, but modern, low-fronted cars
+        have crossflow radiators with tubes that run from side to side.<br />
+        In an engine at its ordinary working temperature, the coolant is only
+        just below normal boiling point.<br />
+        The risk of boiling is avoided by increasing the pressure in the system,
+        which raises the boiling point.<br />
+        The extra pressure is limited by the radiator cap, which has a pressure
+        valve in it. Excessive pressure opens the valve, and coolant flows out
+        through an overflow pipe.<br />
+        In a cooling system of this type there is a continual slight loss of
+        coolant if the engine runs very hot. The system needs topping up from
+        time to time.<br />
+        Later cars have a sealed system in which any overflow goes into an
+        expansion tank , from which it is sucked back into the engine when the
+        remaining liquid cools.
+      </p>
+      <h2 class="text-4xl">
+        How the fan helps
+      </h2>
+      <p class="text-2xl leading-14">
+        The radiator needs a constant flow of air through its core to cool it
+        adequately. When the car is moving, this happens anyway; but when it is
+        stationary a fan is used to help the airflow.<br />
+        The fan may be driven by the engine, but unless the engine is working
+        hard, it is not always needed while the car is moving, so the energy
+        used in driving it wastes fuel .<br />
+        To overcome this, some cars have a viscous coupling a fluid clutch
+        worked by a temperature sensitive valve that uncouples the fan until the
+        coolant temperature reaches a set point.<br />
+        Other cars have an electric fan, also switched on and off by a
+        temperature sensor .<br />
+        To let the engine warm up quickly, the radiator is closed off by a
+        thermostat , usually sited above the pump. The thermostat has a valve
+        worked by a chamber filled with wax.<br />
+        When the engine warms up, the wax melts, expands and pushes the valve
+        open, allowing coolant to flow through the radiator.<br />
+        When the engine stops and cools, the valve closes again.<br />
+        Water expands when it freezes, and if the water in an engine freezes it
+        can burst the block or radiator. So antifreeze usually ethylene glycol
+        is added to the water to lower its freezing point to a safe level.<br />
+        Antifreeze should not be drained each summer; it can normally be left in
+        for two or three years.
+      </p>
+      <h2 class="text-4xl">
+        Air-cooled engine cooling systems
+      </h2>
+      <p class="text-2xl leading-14">
+        In an air-cooled engine, the block and cylinder head are made with deep
+        fins on the outside.
+      </p>
+      <div
+        class="flex flex-col lg:flex-row lg:justify-center gap-8 lg:gap-64 text-center">
+        <div class="flex flex-col gap-8">
+          <img class="w-full lg:w-90 h-110  mx-auto"
+            src="src/images/cool and heating/air-cooled-engine-cooling-systems 1.png"
+            alt>
+          <p class="text-2xl leading-14">Fins on an air-cooled cylinder are
+            wider at the top, where most
+            heat is generated.</p>
+        </div>
+        <div class="flex flex-col gap-8">
+          <img class="w-full lg:w-120 h-110 mx-auto"
+            src="src/images/cool and heating/air-cooling-through-fins 1.png" alt>
+          <p class="text-2xl leading-14">
+            Horizontal air-cooled engines have cooling ducts to the fins.
+          </p>
+        </div>
+      </div>
+      <p class="text-2xl leading-14">
+        Frequently a duct runs all around the fins, and an engine-driven fan
+        blows air through the duct to take heat away from the fins.
+        A temperature-sensitive valve controls the amount of air being pushed
+        around by the fan, and keeps the temperature constant even on cold days.
+      </p>
+      <h2 class="text-4xl">
+        Cooling the oil
+      </h2>
+
+      <div class="">
+        <div
+          class=" grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10">
+
+          <!-- Card 1 -->
+          <div class="flex flex-col items-center text-center">
+            <img
+              src="src/images/cool and heating/air-cooled-engine-cooling-systems 3.png"
+              alt="Air cooled engine"
+              class="w-96 h-110 object-contain mb-6" />
+            <p class="text-white text-lg leading-7">
+              Fins on an air-cooled cylinder are wider at the top, where most
+              heat is
+              generated.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col items-center text-center">
+            <img
+              src="src/images/cool and heating/air-cooling-through-fins 2.png"
+              alt="Horizontal air cooled engine"
+              class="w-96 h-110 object-contain mb-6" />
+            <p class="text-white text-lg leading-7">
+              Horizontal air-cooled engines have cooling ducts to the fins.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col items-center text-center">
+            <img
+              src="src/images/cool and heating/air-cooled-engine-cooling-systems 3.png"
+              alt="Cylinder fins"
+              class="w-96 h-110 object-contain mb-6" />
+            <p class="text-white text-lg leading-7">
+              Fins on an air-cooled cylinder are wider at the top, when most
+              heat is
+              generated.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex flex-col items-center text-center">
+            <img
+              src="src/images/cool and heating/water-valve-heating-system 2.png"
+              alt="Heater matrix"
+              class="w-96 h-110 object-contain mb-6" />
+            <p class="text-white text-lg leading-7">
+              In a heater worked by a water valve, all the air goes through the
+              matrix. The matrix temperature is controlled by regulating the
+              amount
+              of hot water going through it.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+        <footer class="bg-black text-gray-400">
+            <div class="max-w-screen-2xl mx-auto px-8 py-14">
+
+                <!-- Top Grid -->
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                    <!-- Brand -->
+                    <div>
+                        <div
+                            class="flex items-center gap-2 text-white text-xl font-semibold mb-4">
+                            <span class="text-yellow-400">
+                                <img class="h-6.5"
+                                    src="src/images/HomePage/icons/Icon-5.svg"
+                                    alt>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20" fill="none">
+                    <path d="M10 5.83325V17.4999" stroke="#FFB61B"
+                    stroke-width="1.66667" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                    <path
+                    d="M2.50008 15C2.27907 15 2.06711 14.9122 1.91083 14.7559C1.75455 14.5996 1.66675 14.3877 1.66675 14.1667V3.33333C1.66675 3.11232 1.75455 2.90036 1.91083 2.74408C2.06711 2.5878 2.27907 2.5 2.50008 2.5H6.66675C7.5508 2.5 8.39865 2.85119 9.02377 3.47631C9.64889 4.10143 10.0001 4.94928 10.0001 5.83333C10.0001 4.94928 10.3513 4.10143 10.9764 3.47631C11.6015 2.85119 12.4494 2.5 13.3334 2.5H17.5001C17.7211 2.5 17.9331 2.5878 18.0893 2.74408C18.2456 2.90036 18.3334 3.11232 18.3334 3.33333V14.1667C18.3334 14.3877 18.2456 14.5996 18.0893 14.7559C17.9331 14.9122 17.7211 15 17.5001 15H12.5001C11.837 15 11.2012 15.2634 10.7323 15.7322C10.2635 16.2011 10.0001 16.837 10.0001 17.5C10.0001 16.837 9.73669 16.2011 9.26785 15.7322C8.79901 15.2634 8.16312 15 7.50008 15H2.50008Z"
+                    stroke="#FFB61B" stroke-width="1.66667"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> -->
+                            </span>
+                            CarXray
+                        </div>
+
+                        <p
+                            class="leading-relaxed mb-6 max-w-77.5 text-lg">
+                            A comprehensive educational resource for
+                            understanding automotive
+                            systems, repairs, and modifications.
+                        </p>
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-3">
+                            <a href="#"
+                                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                                <img class="h-6.5"
+                                    src="src/images/HomePage/icons/Icon-2.svg"
+                                    alt>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 16 16" fill="none">
+                                <path
+                                d="M14.6666 2.6666C14.6666 2.6666 14.1999 4.0666 13.3333 4.93327C14.3999 11.5999 7.06659 16.4666 1.33325 12.6666C2.79992 12.7333 4.26659 12.2666 5.33325 11.3333C1.99992 10.3333 0.333252 6.39993 1.99992 3.33327C3.46659 5.0666 5.73325 6.0666 7.99992 5.99993C7.39992 3.19993 10.6666 1.59993 12.6666 3.4666C13.3999 3.4666 14.6666 2.6666 14.6666 2.6666Z"
+                                stroke="#6A7282" stroke-width="1.33333"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> -->
+                            </a>
+                            <a href="#"
+                                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                                <img class="h-6.5"
+                                    src="src/images/HomePage/icons/Icon-1.svg"
+                                    alt>
+                            </a>
+                            <a href="#"
+                                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                                <img class="h-6.5 w-6.5 block"
+                                    src="src/images/HomePage/icons/Icon.svg"
+                                    alt>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Learn -->
+                    <div>
+                        <h3
+                            class="text-white text-lg font-semibold mb-4">Learn</h3>
+                        <ul class="space-y-4">
+                            <li><a href="engine.html"
+                                    class="hover:text-white">
+                                    Engine
+                                </a></li>
+                            <li><a href="fuel system.html"
+                                    class="hover:text-white">
+                                    Fuel System
+                                </a></li>
+                            <li><a href="ignition-electrical.html"
+                                    class="hover:text-white">
+                                    Ignition & Electrical
+                                </a></li>
+                            <li><a href="cooling and heating.html"
+                                    class="hover:text-white">
+                                    Cooling & Heating
+                                </a></li>
+                            <li><a href="Transmission-Drivetrain.html"
+                                    class="hover:text-white">
+                                    Transmission
+                                </a></li>
+                            <li><a href="braking-system.html"
+                                    class="hover:text-white">
+                                    Brakes
+                                </a></li>
+                            <li><a href="Steering-Suspension.html"
+                                    class="hover:text-white">
+                                    Suspension & Steering
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources -->
+                    <div>
+                        <h3
+                            class="text-white text-lg font-semibold mb-4">Resources</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#" class="hover:text-white">All
+                                    Articles</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Video
+                                    Tutorials</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Repair
+                                    Guides</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Diagrams</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Glossary</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- About -->
+                    <div>
+                        <h3
+                            class="text-white text-lg font-semibold mb-4">About</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#"
+                                    class="hover:text-white">About This
+                                    Project</a></li>
+                            <li><a href="#" class="hover:text-white">How
+                                    to
+                                    Use</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Contact
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Support</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-zinc-800 my-10"></div>
+
+                <!-- Bottom Bar -->
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p>© 2025 CarXray. Graduation Project.</p>
+
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white">Privacy</a>
+                        <a href="#" class="hover:text-white">Terms</a>
+                        <a href="#"
+                            class="hover:text-white">Disclaimer</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

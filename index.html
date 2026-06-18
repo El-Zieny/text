@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="src/style.css" />
+        <title>Car X-ray</title>
+    </head>
+    <body>
+
+        <!-- NAAAV NAAAV NAAAV -->
+        <!-- NAAAV NAAAV NAAAV -->
+        <!-- NAAAV NAAAV NAAAV -->
+        <!-- NAAAV NAAAV NAAAV -->
+        <nav class="lg:hidden">
+            <div
+                class="bg-nav-bg h-18 flex justify-between items-center text-white">
+                <a href="index.html">
+                    <img
+                        src="src/images/HomePage/ChatGPT Image.png"
+                        class="w-40"
+                        alt="asd" />
+                </a>
+                <button id="menu-button"
+                    class="text-3xl mr-6 text-gray-400">☰</button>
+            </div>
+            <div id="mob-nav" class="mob-nav bg-[#1F1F1F] w-full px-10"
+                style="max-height: 0px; overflow: hidden; transition: max-height 0.3s ease;">
+                <div class="flex flex-col">
+                    <a
+                        class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+                        href="index.html">
+                        <div class="flex w-full justify-between">
+                            <div class="flex gap-4">
+                                <svg class="mt-1 w-6 h-6 inline"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                                    </path>
+                                </svg>
+                                <p class>Home</p>
+                            </div>
+                            <p class="justify-self-end">></p>
+                        </div>
+                    </a>
+
+                    <div class="border-t border-neutral-700"></div>
+
+                    <a
+                        class="hover:bg-neutral-800  w-full  items-center gap-2 text-2xl text-gray-400 py-6"
+                        href="about.html">
+                        <div class="flex w-full justify-between">
+                            <div class="flex gap-4">
+                                <svg class="mt-1 w-6 h-6" fill="currentColor"
+                                    viewBox="0 0 20 20"><path
+                                        fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <p class>About</p>
+                            </div>
+                            <p class="justify-self-end">></p>
+                        </div>
+                    </a>
+
+                    <div class="border-t border-neutral-700"></div>
+                    <a
+                        class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+                        href="categories.html">
+                        <div class="flex w-full justify-between">
+                            <div class="flex gap-4">
+                                <svg class="mt-1 w-6 h-6 inline"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"><path
+                                        d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path><path
+                                        fill-rule="evenodd"
+                                        d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6a1 1 0 011-1z"
+                                        clip-rule="evenodd"></path></svg>
+                                <p class>Categories</p>
+                            </div>
+                            <p class="justify-self-end">></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="border-t border-neutral-700"></div>
+                <div class="search my-8">
+                    <form action method="GET"
+                        class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full">
+                        <img src="src/images/HomePage/icons/Icon-3.svg"
+                            class="size-6 mt-2" alt>
+                        <input type="search" placeholder="Search..."
+                            class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
+                    </form>
+                </div>
+                <div id="guestButtons"
+                    class="sign-buttons flex flex-col gap-6 mb-12">
+                    <a href="login.html"
+                        class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
+                        In</a>
+                    <a href="signup.html"
+                        class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
+                        Up</a>
+                </div>
+
+                <div id="userButtons"
+                    class="sign-buttons flex flex-col gap-6 mb-12">
+                    <a href="index.html"
+                        class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">start
+                        learning</a>
+                    <a href="#" id="logoutBtnMobile"
+                        class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <nav
+            class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8">
+            <div class="left-nav flex-row items-center flex h-full">
+                <a href="index.html">
+                    <img
+                        src="src/images/HomePage/ChatGPT Image.png"
+                        alt="asd" />
+                </a>
+                <div class="flex h-full items-center">
+                    <a
+                        class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+                        href="index.html">Home</a>
+                    <a
+                        class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+                        href="about.html">About</a>
+                    <a
+                        class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+                        href="categories.html">Categories</a>
+                </div>
+            </div>
+            <div class="right-nav flex gap-4">
+                <form action method="GET"
+                    class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64">
+                    <img src="src/images/HomePage/icons/Icon-3.svg" alt>
+                    <input type="search" placeholder="Search..."
+                        class="focus:outline-none" />
+                </form>
+                <div id="guestButtonsDesktop" class="sign-buttons flex gap-2">
+                    <a href="login.html"
+                        class="rounded-full border-white border px-6 py-2.25 
+                            hover:bg-white hover:text-black">Sign In</a>
+                    <a href="signup.html"
+                        class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Sign
+                        Up</a>
+                </div>
+                <div id="userButtonsDesktop" class="sign-buttons flex gap-2"
+                    style="display:none;">
+                    <a href="#" id="logoutBtnDesktop"
+                        class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- NAAAV NAAAV NAAAV -->
+        <!-- NAAAV NAAAV NAAAV -->
+        <!-- NAAAV NAAAV NAAAV -->
+        <!-- NAAAV NAAAV NAAAV -->
+
+        <div class="landing">
+            <div
+                class="landing-gradient  w-full relative p-8 flex flex-col justify-between">
+                <div
+                    class="landing-text text-white font-extrabold leading-13">
+                    <!--  -->
+                    <!-- <div class=""></div> -->
+                    <div class="flex">
+                        <!--  -->
+                        <div class="h-20 w-8"></div>
+                        <div>
+                            <p class="text-7xl">
+                                Learn<br /> How<br /> Cars<br /> Work
+                            </p>
+                            <p
+                                class="text-primary font-normal text-2xl mt-3">Repair,
+                                Modify,
+                                and Master <span class="text-white">Every
+                                    Detail.</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <img
+                    class="w-24 left-4 top-1/2 animate-[floaty_3s_ease-in-out_infinite]
+                xl:w-36 absolute xl:bottom-20 xl:left-44"
+                    src="src/images/HomePage/screw.png" alt>
+                <img
+                    class="w-42 right-12 top-12 animate-[floaty_2s_ease-in-out_infinite]
+                xl:w-80 absolute xl:top-14 xl:right-44"
+                    src="src/images/HomePage/black and white screwdriver.png"
+                    alt>
+
+                <div
+                    class="landing-buttons flex flex-col lg:flex-row gap-4 justify-center mt-8 xl:mt-24 w-11/12 mx-auto">
+                    <!-- <div class="h-"></div> -->
+                    <a
+                        href="categories.html"
+                        class="rounded-lg py-3 px-8 text-2xl bg-primary text-white">Start
+                        Learning</a>
+                    <a href="AI chatbot.html"
+                        class="rounded-lg py-3 px-8 text-2xl bg-white border border-[#364153]">
+                        <div class="flex gap-2.5 justify-center">
+                            <img src="src/images/HomePage/icons/Icon-7.svg"
+                                class="size-7" alt>
+                            <p>AI Assistant</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div
+                    class="scroll-shape w-full flex justify-center mt-16 animate-[floaty_2s_ease-in_infinite]">
+                    <a href="#categories"
+                        class="mobile-scroll-cue lg:hidden"
+                        aria-label="Scroll to categories">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor"
+                                stroke-width="2.4" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- <div
+                        class="hidden border-2 w-9 h-16 rounded-full lg:flex justify-center pt-2.5">
+                        <div class="w-2 h-4 bg-black rounded-full"></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="categories" class="categories parent px-4 py-8 lg:p-18">
+            <div class="text flex justify-between text-3xl mb-8 lg:mb-16">
+                <h2>Categories</h2>
+                <a href="categories.html">see more</a>
+            </div>
+
+            <div class="slider flex items-center lg:gap-8">
+                <button
+                    id="prevBtn"
+                    class="rounded-full bg-[#FBBC05] hover:bg-[#FF9B00] cursor-pointer h-14 w-14 pr-1 flex items-center justify-center -mr-8 z-10 lg:m-0"><img
+                        class="h-12" src="src/images/HomePage/icons/Icon-6.svg"
+                        alt></button>
+                <div class="overflow-hidden flex-1">
+                    <div id="sliderTrack"
+                        class="flex gap-8 transition-transform duration-500">
+                        <div class="slide-container slide1"><a
+                                class="slider-link text-2xl"
+                                href="engine.html">Engine</a></div>
+                        <div class="slide-container slide2"><a
+                                class="slider-link text-2xl"
+                                href="fuel system.html">Fuel
+                                System</a></div>
+                        <div class="slide-container slide3"><a
+                                class="slider-link text-2xl"
+                                href="braking-system.html">Braking
+                                System</a></div>
+                        <div class="slide-container slide4"><a
+                                class="slider-link text-2xl"
+                                href="ignition-electrical.html">Ignition
+                                & Electrical </a></div>
+                        <div class="slide-container slide5"><a
+                                class="slider-link text-2xl"
+                                href="cooling and heating.html">Cooling
+                                & Heating</a></div>
+                        <div class="slide-container slide6"><a
+                                class="slider-link text-2xl"
+                                href="Steering-Suspension.html">Suspension
+                                & Steering</a></div>
+                        <div class="slide-container slide7"><a
+                                class="slider-link text-2xl"
+                                href="transmission-drivetrain.html">Transmission
+                                & Drivetrain </a></div>
+                    </div>
+                </div>
+                <button
+                    id="nextBtn"
+                    class="rounded-full bg-[#FBBC05] hover:bg-[#FF9B00] cursor-pointer h-14 w-14 pl-1 flex items-center justify-center -ml-8 z-10 lg:m-0"><img
+                        class="h-12"
+                        src="src/images/HomePage/icons/Icon-4.svg"
+                        alt></button>
+            </div>
+        </div>
+
+        <div class="about flex flex-col gap-12 parent py-18">
+            <div
+                class="card bg-primary p-10 flex flex-col gap-6 rounded-2xl w-10/12 mx-auto border shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                <h2
+                    class="text-black text-3xl md:text-4xl font-bold ">About</h2>
+                <p class="text-black text-2xl md:text-3xl"> Car X-Ray A
+                    Web-based Platform for Simplified Automotive
+                    Knowledge.
+                    This website will provides clear structured,
+                    interavtive
+                    information
+                    about various cars parts , including engines belts ,
+                    filters
+                    , spark
+                    plugs , ignition colis, and tires.</p>
+            </div>
+            <div
+                class="card bg-primary p-10 flex flex-col gap-6 rounded-2xl w-10/12 mx-auto border shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                <h2 class="text-black text-3xl md:text-4xl font-bold ">
+                    Why Car X-Ray</h2>
+                <p class="text-black text-2xl md:text-3xl">
+                    We make car knowledge simple and accessible for
+                    everyone by
+                    explaining all major car systems in a clear, visual,
+                    and
+                    beginner-friendly way. Our platform breaks down
+                    complex
+                    automotive
+                    concepts into easy explanations supported by clean
+                    diagrams
+                    and
+                    practical examples, helping users truly understand
+                    how cars
+                    work. With
+                    a fast search system and a clean, friendly
+                    interface,
+                    finding
+                    information is quick and effortless. We also focus
+                    on
+                    increasing user
+                    awareness of car maintenance, allowing drivers to
+                    recognize
+                    issues
+                    early and make smarter decisions. To make learning
+                    even
+                    easier, an
+                    AI-powered chatbot is available to instantly answer
+                    car-related
+                    questions and guide users anytime they need
+                    help.</p>
+            </div>
+            <div
+                class="card bg-primary p-10 flex flex-col gap-6 rounded-2xl w-10/12 mx-auto border shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                <h2 class="text-black text-3xl md:text-4xl font-bold ">
+                    AI Tool</h2>
+                <p class="text-black text-2xl md:text-3xl">
+                    Our smart Al assistant make car knowledge easier
+                    than ever-
+                    just ask
+                    anything from simple questions to deep technical
+                    details and
+                    its
+                    instantly guides you to the right informations. NO
+                    MORE
+                    SEARCHING, NO
+                    MORE CONFUSION WITH CAR X RAY AI JUST CLEAR ANSWERS
+                    TAILORED
+                    TO WHAT
+                    YOU NEED</p>
+            </div>
+        </div>
+
+        <section class="parent max-w-7xl mx-auto px-6 py-16">
+            <!-- Title -->
+            <h2
+                class="text-2xl md:text-4xl font-bold text-center mb-12">
+                Our Objectives
+            </h2>
+
+            <!-- Cards -->
+            <div class="flex flex-wrap gap-6">
+
+                <!-- Card -->
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 font-bold">
+                            1
+                        </span>
+                        <h3 class="font-semibold text-lg">Educational
+                            Excellence</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Provide comprehensive, accurate, and up-to-date
+                        automotive
+                        education that
+                        meets industry standards and empowers learners
+                        at all
+                        levels.
+                    </p>
+                </div>
+
+                <!-- Card -->
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 font-bold">
+                            2
+                        </span>
+                        <h3 class="font-semibold text-lg">Accessible
+                            Learning</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Make automotive knowledge accessible to everyone
+                        through
+                        clear
+                        explanations,
+                        visual aids, and interactive tools that simplify
+                        complex
+                        concepts.
+                    </p>
+                </div>
+
+                <!-- Card -->
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 font-bold">
+                            3
+                        </span>
+                        <h3 class="font-semibold text-lg">Practical
+                            Skills</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Focus on hands-on, practical knowledge that
+                        learners can
+                        immediately apply
+                        to real-world situations, from basic maintenance
+                        to
+                        advanced
+                        diagnostics.
+                    </p>
+                </div>
+
+                <!-- Card -->
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 font-bold">
+                            4
+                        </span>
+                        <h3 class="font-semibold text-lg">Technology
+                            Integration</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Leverage cutting-edge AI and modern web
+                        technologies to
+                        create an
+                        engaging,
+                        personalized learning experience that adapts to
+                        individual needs.
+                    </p>
+                </div>
+
+                <!-- Card -->
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 font-bold">
+                            5
+                        </span>
+                        <h3 class="font-semibold text-lg">Community
+                            Building</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Foster a supportive community of automotive
+                        enthusiasts
+                        and
+                        professionals
+                        who share knowledge, experiences, and best
+                        practices.
+                    </p>
+                </div>
+
+                <!-- Card -->
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-white border rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 font-bold">
+                            6
+                        </span>
+                        <h3 class="font-semibold text-lg">Intelligent
+                            User
+                            Guidance</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Provide instant car-related assistance through
+                        an
+                        AI-powered
+                        chatbot that
+                        helps users understand car systems and make
+                        better
+                        maintenance
+                        decisions.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="bg-black text-gray-400">
+            <div class="max-w-screen-2xl mx-auto px-8 py-14">
+
+                <!-- Top Grid -->
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                    <!-- Brand -->
+                    <div>
+                        <div
+                            class="flex items-center gap-2 text-white text-xl font-semibold mb-4">
+                            <span class="text-yellow-400">
+                                <img class="h-6.5"
+                                    src="src/images/HomePage/icons/Icon-5.svg"
+                                    alt>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20" fill="none">
+                    <path d="M10 5.83325V17.4999" stroke="#FFB61B"
+                    stroke-width="1.66667" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                    <path
+                    d="M2.50008 15C2.27907 15 2.06711 14.9122 1.91083 14.7559C1.75455 14.5996 1.66675 14.3877 1.66675 14.1667V3.33333C1.66675 3.11232 1.75455 2.90036 1.91083 2.74408C2.06711 2.5878 2.27907 2.5 2.50008 2.5H6.66675C7.5508 2.5 8.39865 2.85119 9.02377 3.47631C9.64889 4.10143 10.0001 4.94928 10.0001 5.83333C10.0001 4.94928 10.3513 4.10143 10.9764 3.47631C11.6015 2.85119 12.4494 2.5 13.3334 2.5H17.5001C17.7211 2.5 17.9331 2.5878 18.0893 2.74408C18.2456 2.90036 18.3334 3.11232 18.3334 3.33333V14.1667C18.3334 14.3877 18.2456 14.5996 18.0893 14.7559C17.9331 14.9122 17.7211 15 17.5001 15H12.5001C11.837 15 11.2012 15.2634 10.7323 15.7322C10.2635 16.2011 10.0001 16.837 10.0001 17.5C10.0001 16.837 9.73669 16.2011 9.26785 15.7322C8.79901 15.2634 8.16312 15 7.50008 15H2.50008Z"
+                    stroke="#FFB61B" stroke-width="1.66667"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> -->
+                            </span>
+                            CarXray
+                        </div>
+
+                        <p
+                            class="leading-relaxed mb-6 max-w-77.5 text-lg">
+                            A comprehensive educational resource for
+                            understanding automotive
+                            systems, repairs, and modifications.
+                        </p>
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-3">
+                            <a href="#"
+                                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                                <img class="h-6.5"
+                                    src="src/images/HomePage/icons/Icon-2.svg"
+                                    alt>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 16 16" fill="none">
+                                <path
+                                d="M14.6666 2.6666C14.6666 2.6666 14.1999 4.0666 13.3333 4.93327C14.3999 11.5999 7.06659 16.4666 1.33325 12.6666C2.79992 12.7333 4.26659 12.2666 5.33325 11.3333C1.99992 10.3333 0.333252 6.39993 1.99992 3.33327C3.46659 5.0666 5.73325 6.0666 7.99992 5.99993C7.39992 3.19993 10.6666 1.59993 12.6666 3.4666C13.3999 3.4666 14.6666 2.6666 14.6666 2.6666Z"
+                                stroke="#6A7282" stroke-width="1.33333"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> -->
+                            </a>
+                            <a href="#"
+                                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                                <img class="h-6.5"
+                                    src="src/images/HomePage/icons/Icon-1.svg"
+                                    alt>
+                            </a>
+                            <a href="#"
+                                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                                <img class="h-6.5 w-6.5 block"
+                                    src="src/images/HomePage/icons/Icon.svg"
+                                    alt>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Learn -->
+                    <div>
+                        <h3
+                            class="text-white text-lg font-semibold mb-4">Learn</h3>
+                        <ul class="space-y-4">
+                            <li><a href="engine.html"
+                                    class="hover:text-white">
+                                    Engine
+                                </a></li>
+                            <li><a href="fuel system.html"
+                                    class="hover:text-white">
+                                    Fuel System
+                                </a></li>
+                            <li><a href="ignition-electrical.html"
+                                    class="hover:text-white">
+                                    Ignition & Electrical
+                                </a></li>
+                            <li><a href="cooling and heating.html"
+                                    class="hover:text-white">
+                                    Cooling & Heating
+                                </a></li>
+                            <li><a href="Transmission-Drivetrain.html"
+                                    class="hover:text-white">
+                                    Transmission
+                                </a></li>
+                            <li><a href="braking-system.html"
+                                    class="hover:text-white">
+                                    Brakes
+                                </a></li>
+                            <li><a href="Steering-Suspension.html"
+                                    class="hover:text-white">
+                                    Suspension & Steering
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources -->
+                    <div>
+                        <h3
+                            class="text-white text-lg font-semibold mb-4">Resources</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#" class="hover:text-white">All
+                                    Articles</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Video
+                                    Tutorials</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Repair
+                                    Guides</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Diagrams</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Glossary</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- About -->
+                    <div>
+                        <h3
+                            class="text-white text-lg font-semibold mb-4">About</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#"
+                                    class="hover:text-white">About This
+                                    Project</a></li>
+                            <li><a href="#" class="hover:text-white">How
+                                    to
+                                    Use</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Contact
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="hover:text-white">Support</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-zinc-800 my-10"></div>
+
+                <!-- Bottom Bar -->
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p>© 2025 CarXray. Graduation Project.</p>
+
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white">Privacy</a>
+                        <a href="#" class="hover:text-white">Terms</a>
+                        <a href="#"
+                            class="hover:text-white">Disclaimer</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>

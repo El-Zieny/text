@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Automatic Gearboxes Work</title>
+        <link rel="stylesheet" href="src/style.css" />  </head>
+  <body class="bg-[#2A2A2A] text-white">
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <nav class="lg:hidden">
+      <div
+        class="bg-nav-bg h-18 flex justify-between items-center text-white">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            class="w-40"
+            alt="asd" />
+        </a>
+        <button id="menu-button"
+          class="text-3xl mr-6 text-gray-400">☰</button>
+      </div>
+      <div id="mob-nav" class="mob-nav bg-[#1F1F1F] w-full px-10"
+        style="max-height: 0px; overflow: hidden; transition: max-height 0.3s ease;">
+        <div class="flex flex-col">
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="../../index.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20">
+                  <path
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                  </path>
+                </svg>
+                <p class>Home</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+
+          <a
+            class="hover:bg-neutral-800  w-full  items-center gap-2 text-2xl text-gray-400 py-6"
+            href="src/pages/about.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6" fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <p class>About</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+
+          <div class="border-t border-neutral-700"></div>
+          <a
+            class="hover:bg-neutral-800  w-full items-center gap-2 text-2xl text-gray-400 py-6"
+            href="categories.html">
+            <div class="flex w-full justify-between">
+              <div class="flex gap-4">
+                <svg class="mt-1 w-6 h-6 inline"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"><path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path><path
+                    fill-rule="evenodd"
+                    d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6a1 1 0 011-1z"
+                    clip-rule="evenodd"></path></svg>
+                <p class>Categories</p>
+              </div>
+              <p class="justify-self-end">></p>
+            </div>
+          </a>
+        </div>
+        <div class="border-t border-neutral-700"></div>
+        <div class="search my-8">
+          <form action method="GET"
+            class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full">
+            <img src="src/images/HomePage/icons/Icon-3.svg"
+              class="size-6 mt-2" alt>
+            <input type="search" placeholder="Search..."
+              class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
+          </form>
+        </div>
+        <div class="sign-buttons flex flex-col gap-6 mb-12">
+          <a href="login.html"
+            class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
+            In</a>
+          <a href="signup.html"
+            class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8">
+      <div class="left-nav flex-row items-center flex h-full">
+        <a href="index.html">
+          <img
+            src="src/images/HomePage/ChatGPT Image.png"
+            alt="asd" />
+        </a>
+        <div class="flex h-full items-center">
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="index.html">Home</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="src/pages/about.html">About</a>
+          <a
+            class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
+            href="categories.html">Categories</a>
+        </div>
+      </div>
+      <div class="right-nav flex gap-4">
+        <form action method="GET"
+          class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64">
+          <img src="src/images/HomePage/icons/Icon-3.svg" alt>
+          <input type="search" placeholder="Search..."
+            class="focus:outline-none" />
+        </form>
+        <div class="sign-buttons flex gap-2">
+          <a href="src/pages/login.html"
+            class="rounded-full border-white border px-6 py-2.25 
+                            hover:bg-white hover:text-black">Sign In</a>
+          <a href="src/pages/signup.html"
+            class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Sign
+            Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <!-- NAAAV NAAAV NAAAV -->
+    <div class="sub-landing bg-black flex justify-between flex-col ">
+      <div
+        class="title flex flex-col gap-4 pl-8 lg:pl-16 pt-12 lg:pt-24 pr-4 pb-8 relative">
+        <p class="text-lg lg:text-2xl my-4 flex gap-5">
+          <a href="../../index.html">Home</a>
+          <span>/</span>
+          <a href="Transmission-Drivetrain.html">Transmission & Drivetrain</a>
+          <span>/</span>
+        </p>
+        <h1 class="text-4xl lg:text-7xl mb-20 lg:mb-48">
+
+
+          How automatic gearboxes work
+
+
+          
+        </h1>
+        <div
+          class="size-24 lg:size-60  bg-primary rounded-tl-full absolute right-0 -bottom-0.5">
+        </div>
+      </div>
+      <div
+        class="yellow h-14 lg:h-20 flex flex-col lg:flex-row pl-8 lg:pl-8 lg:items-center"
+        style="background: linear-gradient(90deg, #FE9A00 0%, #FBBC05 100%);">
+        <p class="text-lg lg:text-3xl font-bold text-white">
+          The Video Course
+        </p>
+        <p class="lg:ml-4 lg:text-3xl">
+          teaches you every thing about modern cars
+        </p>
+      </div>
+    </div>
+
+
+    <div class="w-full py-16 px-6 md:px-16 lg:px-36 flex flex-col gap-8">
+
+      <!-- Intro -->
+      <p class="text-base md:text-lg lg:text-[20px]">Most modern automatic
+        gearboxes have a set of gears called a planetary or epicyclic gear
+        train.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">A planetary gear set
+        consists of a central gear called the sun gear, an outer ring with
+        internal gear teeth (also known as the annulus, or ring gear), and two
+        or three gears known as planet gears that rotate between the sun and
+        ring gears.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The drive train is coupled
+        to a mechanism known as a torque converter, which acts as a fluid drive
+        between the engine and transmission.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">If the sun gear is locked
+        and the planets driven by the planet carrier, the output is taken from
+        the ring gear, achieving a speed increase.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">If the ring gear is locked
+        and the sun gear is driven, the planet gears transmit drive through the
+        planet carrier and speed is reduced.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">With power input going to
+        the sun gear and with the planet carrier locked, the ring gear is
+        driven, but transmits drive in reverse.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">To achieve direct drive
+        without change of speed or direction of rotation, the sun is locked to
+        the ring gear and the whole unit turns as one.</p>
+
+      <!-- Section 1 - Torque Converter -->
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">Torque
+        convertor</h2>
+
+      <!-- صورة كبيرة torque converter هنا -->
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="w-full lg:w-1/2">
+          <img src="src/images/transmission-drivetrain/torque-convertor 1.png"
+            alt="Torque Converter"
+            class="w-full rounded-2xl max-h-96 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px] mt-4">Cut-away view of a
+            torque converter showing the impeller, turbine and reactor.</p>
+        </div>
+        <div class="w-full lg:w-1/2 flex flex-col gap-8">
+          <!-- صورة high revs هنا -->
+          <div class="flex flex-col gap-4">
+            <img
+              src="src/images/transmission-drivetrain/how-a-torque-convertor-works 1.png"
+              alt class="w-full rounded-2xl max-h-48 object-contain">
+            <p class="text-base md:text-lg lg:text-[20px]">At high revs the
+              reactor starts to turn. When turbine, impeller and reactor are
+              running at the same speed, oil is not deflected.</p>
+          </div>
+          <!-- صورة low revs هنا -->
+          <div class="flex flex-col gap-4">
+            <img
+              src="src/images/transmission-drivetrain/how-a-torque-convertor-works--2 1.png"
+              alt class="w-full rounded-2xl max-h-48 object-contain">
+            <p class="text-base md:text-lg lg:text-[20px]">At low revs the
+              reactor is stationary and deflects the oil back to the impeller.
+              This increases the torque applied to the turbine.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-base md:text-lg lg:text-[20px]">A torque converter is a
+        fluid coupling that acts like a clutch, except that drive is by
+        hydraulic pressure.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The converter has three
+        main components - the impeller, bolted to the flywheel; the turbine,
+        connected to the gearbox input shaft; and the central reactor between
+        the two, which has a one-way clutch called a freewheel.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">As the engine speed is
+        increased, the centrifugal force acting on the hydraulic fluid via the
+        impeller vanes transmits the torque, or turning effort, to the
+        turbine.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The central reactor
+        converts this turning effort by redirecting the flow of fluid back to
+        the impeller to give higher torque at low speeds.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">Once the engine speeds up
+        and develops more power, the need for this torque amplification
+        decreases and the reactor freewheels. The torque converter then acts as
+        a fluid flywheel, connecting engine to gearbox.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The main components of a
+        torque converter are shown in the diagram - the impeller, reactor (or
+        stator) and turbine.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The smaller diagrams show
+        the direction taken by the hydraulic fluid under centrifugal forces.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The same effect can also be
+        achieved by locking the planet gears to the planet carrier.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">Most automatic gearboxes
+        have three forward speeds, and use two sets of epicyclic gears.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The locking sequences of
+        the epicyclic gear train are achieved by hydraulic pressure operating
+        brake bands or multi-plate clutches.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The bands are tightened
+        round the ring gear to prevent it turning, and the clutches are used to
+        lock the sun gear and planets.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">The correct sequence of
+        pressure build-up and release is controlled by a complex arrangement of
+        hydraulic valves in conjunction with sensors that respond to engine
+        load, road speed and throttle opening.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">A mechanism linked to the
+        throttle - known as a kickdown - is used to effect a change-down for
+        rapid acceleration. When you press down the accelerator suddenly to its
+        full extent, a lower gear is selected almost instantly.</p>
+      <p class="text-base md:text-lg lg:text-[20px]">Most automatic gearboxes
+        have an override system so that the driver can hold a low gear as
+        required.</p>
+
+      <!-- Section 2 - Epicyclic -->
+      <h2 class="text-2xl md:text-4xl lg:text-[58px] font-bold">Epicyclic
+        gearing made simple</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-4">
+          <!-- صورة 1 epicyclic هنا -->
+          <img
+            src="src/images/transmission-drivetrain/epicyclic-gearing-made-simple 1.png"
+            alt class="w-full rounded-2xl max-h-48 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">With central sun gear
+            locked, planets turn round it; carrier and outer ring turn same
+            way.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <!-- صورة 2 epicyclic هنا -->
+          <img
+            src="src/images/transmission-drivetrain/epicyclic-gearing-made-simple--2 1.png"
+            alt class="w-full rounded-2xl max-h-48 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">If sun gear is locked
+            to outer ring gear, planets cannot turn, so carrier turns whole
+            unit.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <!-- صورة 3 epicyclic هنا -->
+          <img
+            src="src/images/transmission-drivetrain/epicyclic-gearing-made-simple--3 1.png"
+            alt class="w-full rounded-2xl max-h-48 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">With planet carrier
+            locked, sun gear turns planets to drive ring gear opposite way.</p>
+        </div>
+      </div>
+
+      <!-- Section 3 - Drive modes -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col gap-4">
+          <h3 class="text-xl md:text-2xl lg:text-3xl font-bold">Drive one (first
+            gear)</h3>
+          <!-- صورة first gear هنا -->
+          <img
+            src="src/images/transmission-drivetrain/drive-one-first-gear 1.png"
+            alt class="w-full rounded-2xl max-h-64 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">The forward-drive
+            clutch is engaged and the engine turns the first ring gear. This
+            causes the planet gears to drive the common sun gear in the opposite
+            direction. The second planet carrier is held by a brake band, so the
+            planets drive the second ring gear and output shaft thus producing
+            two reductions in the speed of the engine.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h3 class="text-xl md:text-2xl lg:text-3xl font-bold">Drive two
+            (second gear)</h3>
+          <!-- صورة second gear هنا -->
+          <img
+            src="src/images/transmission-drivetrain/drive-two-second-gear 1.png"
+            alt class="w-full rounded-2xl max-h-64 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">Drive two provides an
+            intermediate ratio. The forward-drive clutch is engaged so the
+            engine drives the first ring gear. The sun gear is braked and the
+            planet gears revolve around it. This causes the carrier to be driven
+            in the same direction. The carrier shaft is the output shaft, so one
+            reduction is used. The second planet gears and their carrier
+            freewheel.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h3 class="text-xl md:text-2xl lg:text-3xl font-bold">Drive (top
+            gear)</h3>
+          <!-- صورة top gear هنا -->
+          <img src="src/images/transmission-drivetrain/drive-top-gear 1.png" alt
+            class="w-full rounded-2xl max-h-64 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">The forward-drive
+            clutch is engaged and the engine drives the first ring gear. The
+            reverse clutch is also engaged, which locks the ring gear to the sun
+            gear and both turn at the same speed. The planet gears cannot turn,
+            so the carrier also turns at engine speed. Output is taken from the
+            carrier shaft, which turns at engine speed (direct drive).</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h3 class="text-xl md:text-2xl lg:text-3xl font-bold">Reverse</h3>
+          <!-- صورة reverse هنا -->
+          <img
+            src="src/images/transmission-drivetrain/reverse-gear-is-usually-marked-r-on-the-selector-the-forward-drive-clutch-is-disengaged-and-the-first-ring-gear-freewheels 1.png"
+            alt class="w-full rounded-2xl max-h-64 object-contain">
+          <p class="text-base md:text-lg lg:text-[20px]">Reverse gear is usually
+            marked 'R' on the selector. The forward-drive clutch is disengaged
+            and the first ring gear freewheels. The reverse clutch is engaged
+            and the engine drives the sun gear. The second planet carrier is
+            braked and the sun gear causes the planet gears to drive the second
+            ring gear in the opposite direction to give reverse drive.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="bg-black text-gray-400">
+      <div class="max-w-screen-2xl mx-auto px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <div
+              class="flex items-center gap-2 text-white text-xl font-semibold mb-4">
+              <span class="text-yellow-400">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-5.svg"
+                  alt>
+              </span>
+              CarXray
+            </div>
+            <p class="leading-relaxed mb-6 max-w-77.5 text-lg">A comprehensive
+              educational resource for understanding automotive systems,
+              repairs, and modifications.</p>
+            <div class="flex gap-3">
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-2.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5" src="src/images/HomePage/icons/Icon-1.svg"
+                  alt>
+              </a>
+              <a href="#"
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
+                <img class="h-6.5 w-6.5 block"
+                  src="src/images/HomePage/icons/Icon.svg" alt>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Learn</h3>
+                        <ul class="space-y-4">
+                            <li><a href="engine.html"
+                                    class="hover:text-white">
+                                    Engine
+                                </a></li>
+                            <li><a href="fuel system.html"
+                                    class="hover:text-white">
+                                    Fuel System
+                                </a></li>
+                            <li><a href="ignition-electrical.html"
+                                    class="hover:text-white">
+                                    Ignition & Electrical
+                                </a></li>
+                            <li><a href="cooling and heating.html"
+                                    class="hover:text-white">
+                                    Cooling & Heating
+                                </a></li>
+                            <li><a href="Transmission-Drivetrain.html"
+                                    class="hover:text-white">
+                                    Transmission
+                                </a></li>
+                            <li><a href="braking-system.html"
+                                    class="hover:text-white">
+                                    Brakes
+                                </a></li>
+                            <li><a href="Steering-Suspension.html"
+                                    class="hover:text-white">
+                                    Suspension & Steering
+                                </a></li>
+                        </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">All Articles</a></li>
+              <li><a href="#" class="hover:text-white">Video Tutorials</a></li>
+              <li><a href="#" class="hover:text-white">Repair Guides</a></li>
+              <li><a href="#" class="hover:text-white">Diagrams</a></li>
+              <li><a href="#" class="hover:text-white">Glossary</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">About</h3>
+            <ul class="space-y-4">
+              <li><a href="#" class="hover:text-white">About This
+                  Project</a></li>
+              <li><a href="#" class="hover:text-white">How to Use</a></li>
+              <li><a href="#" class="hover:text-white">Contact Us</a></li>
+              <li><a href="#" class="hover:text-white">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-zinc-800 my-10"></div>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>©️ 2025 carXray. Graduation Project.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white">Privacy</a>
+            <a href="#" class="hover:text-white">Terms</a>
+            <a href="#" class="hover:text-white">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
