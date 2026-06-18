@@ -399,22 +399,22 @@ body .chat-header {
 }
 
 .slide4 {
-  background-image: url(images/categories/3-Image\ \(Electrical\ System\).png);
+  background-image: url(images/categories/3electrical.png);
   background-size: cover;
 }
 
 .slide5 {
-  background-image: url(images/categories/4-Image\ \(Cooling\ System\).png);
+  background-image: url(images/categories/4cooling.png);
   background-size: cover;
 }
 
 .slide6 {
-  background-image: url(images/categories/6-Image\ \(Suspension\).png);
+  background-image: url(images/categories/6Suspension.png);
   background-size: cover;
 }
 
 .slide7 {
-  background-image: url(images/categories/5-Image\ \(Transmission\).png);
+  background-image: url(images/categories/7brake.png);
   background-size: cover;
 }
 
