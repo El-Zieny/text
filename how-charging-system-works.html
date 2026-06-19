@@ -13,7 +13,7 @@
             }
         })();
     </script>
-    
+
     <style>
         /* Hide guest buttons if authenticated */
         [data-auth="user"] #guestButtons,
@@ -43,8 +43,7 @@
           <img
             src="src/images/HomePage/ChatGPT Image.png"
             class="w-40"
-            alt="asd"
-          />
+            alt="asd" />
         </a>
         <button id="menu-button" class="text-3xl mr-6 text-gray-400">☰</button>
       </div>
@@ -55,23 +54,19 @@
           max-height: 0px;
           overflow: hidden;
           transition: max-height 0.3s ease;
-        "
-      >
+        ">
         <div class="flex flex-col">
           <a
             class="hover:bg-neutral-800 w-full items-center gap-2 text-2xl text-gray-400 py-6"
-            href="../../index.html"
-          >
+            href="../../index.html">
             <div class="flex w-full justify-between">
               <div class="flex gap-4">
                 <svg
                   class="mt-1 w-6 h-6 inline"
                   fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                  viewBox="0 0 20 20">
                   <path
-                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-                  ></path>
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                 </svg>
                 <p class>Home</p>
               </div>
@@ -83,20 +78,17 @@
 
           <a
             class="hover:bg-neutral-800 w-full items-center gap-2 text-2xl text-gray-400 py-6"
-            href="src/pages/about.html"
-          >
+            href="src/pages/about.html">
             <div class="flex w-full justify-between">
               <div class="flex gap-4">
                 <svg
                   class="mt-1 w-6 h-6"
                   fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                  viewBox="0 0 20 20">
                   <path
                     fill-rule="evenodd"
                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                    clip-rule="evenodd"
-                  ></path>
+                    clip-rule="evenodd"></path>
                 </svg>
                 <p class>About</p>
               </div>
@@ -107,23 +99,19 @@
           <div class="border-t border-neutral-700"></div>
           <a
             class="hover:bg-neutral-800 w-full items-center gap-2 text-2xl text-gray-400 py-6"
-            href="categories.html"
-          >
+            href="categories.html">
             <div class="flex w-full justify-between">
               <div class="flex gap-4">
                 <svg
                   class="mt-1 w-6 h-6 inline"
                   fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                  viewBox="0 0 20 20">
                   <path
-                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"
-                  ></path>
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path>
                   <path
                     fill-rule="evenodd"
                     d="M3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6a1 1 0 011-1z"
-                    clip-rule="evenodd"
-                  ></path>
+                    clip-rule="evenodd"></path>
                 </svg>
                 <p class>Categories</p>
               </div>
@@ -136,38 +124,40 @@
           <form
             action
             method="GET"
-            class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full"
-          >
+            class="flex gap-4 bg-[#2A2A2A] px-4 py-2 rounded-full w-full">
             <img
               src="src/images/HomePage/icons/Icon-3.svg"
               class="size-6 mt-2"
-              alt
-            />
+              alt />
             <input
               type="search"
               placeholder="Search..."
-              class="focus:outline-none w-full text-gray-400 h-10 text-2xl"
-            />
+              class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
           </form>
         </div>
-        <div class="sign-buttons flex flex-col gap-6 mb-12">
-          <a
-            href="login.html"
-            class="rounded-xl py-4 text-center border-gray-200 border text-gray-200 px-6"
-            >Sign In</a
-          >
-          <a
-            href="signup.html"
-            class="rounded-xl py-4 text-center bg-gray-200 text-black px-6"
-            >Sign Up</a
-          >
+        <div id="guestButtons"
+          class="sign-buttons flex flex-col gap-6 mb-12">
+          <a href="login.html"
+            class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
+            In</a>
+          <a href="signup.html"
+            class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
+            Up</a>
+        </div>
+
+        <div id="userButtons"
+          class="sign-buttons flex flex-col gap-6 mb-12">
+          <a href="index.html" id="userNameMobile"
+            class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Hi,
+            User</a>
+          <a href="#" id="logoutBtnMobile"
+            class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Logout</a>
         </div>
       </div>
     </nav>
 
     <nav
-      class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8"
-    >
+      class="bg-nav-bg h-18 justify-between items-center text-white hidden lg:flex pr-8">
       <div class="left-nav flex-row items-center flex h-full">
         <a href="index.html">
           <img src="src/images/HomePage/ChatGPT Image.png" alt="asd" />
@@ -175,49 +165,40 @@
         <div class="flex h-full items-center">
           <a
             class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
-            href="index.html"
-            >Home</a
-          >
+            href="index.html">Home</a>
           <a
             class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
-            href="src/pages/about.html"
-            >About</a
-          >
+            href="src/pages/about.html">About</a>
           <a
             class="text-gray-200 text-xl px-3 h-full text-center flex items-center hover:bg-neutral-800"
-            href="categories.html"
-            >Categories</a
-          >
+            href="categories.html">Categories</a>
         </div>
       </div>
       <div class="right-nav flex gap-4">
         <form
           action
           method="GET"
-          class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64"
-        >
+          class="flex gap-2 bg-[#2A2A2A] px-4 py-2 rounded-full w-64">
           <img src="src/images/HomePage/icons/Icon-3.svg" alt />
           <input
             type="search"
             placeholder="Search..."
-            class="focus:outline-none"
-          />
+            class="focus:outline-none" />
         </form>
         <div id="guestButtonsDesktop" class="sign-buttons flex gap-2">
           <a
             href="login.html"
-            class="rounded-full border-white border px-6 py-2.25 hover:bg-white hover:text-black"
-            >Sign In</a
-          >
+            class="rounded-full border-white border px-6 py-2.25 hover:bg-white hover:text-black">Sign
+            In</a>
           <a
             href="signup.html"
-            class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border"
-            >Sign Up</a
-          >
+            class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Sign
+            Up</a>
         </div>
         <div id="userButtonsDesktop" class="sign-buttons flex gap-2">
           <a href="#" id="userNameDesktop"
-            class="rounded-full border-white border px-6 py-2.25 hover:bg-white hover:text-black">Hi, User</a>
+            class="rounded-full border-white border px-6 py-2.25 hover:bg-white hover:text-black">Hi,
+            User</a>
           <a href="#" id="logoutBtnDesktop"
             class="rounded-full bg-white text-black px-6 py-2.25 hover:bg-transparent hover:text-white hover:border-white border">Logout</a>
         </div>
@@ -231,8 +212,7 @@
 
     <div class="sub-landing bg-black flex justify-between flex-col">
       <div
-        class="title flex flex-col gap-4 pl-8 lg:pl-16 pt-12 lg:pt-24 pr-4 pb-8 relative"
-      >
+        class="title flex flex-col gap-4 pl-8 lg:pl-16 pt-12 lg:pt-24 pr-4 pb-8 relative">
         <p class="text-lg lg:text-2xl my-4 flex gap-5">
           <a href="../../index.html">Home</a>
           <span>/</span>
@@ -243,13 +223,11 @@
           How the charging system works
         </h1>
         <div
-          class="size-24 lg:size-60 bg-primary rounded-tl-full absolute right-0 -bottom-0.5"
-        ></div>
+          class="size-24 lg:size-60 bg-primary rounded-tl-full absolute right-0 -bottom-0.5"></div>
       </div>
       <div
         class="yellow h-14 lg:h-20 flex flex-col lg:flex-row pl-8 lg:pl-8 lg:items-center"
-        style="background: linear-gradient(90deg, #fe9a00 0%, #fbbc05 100%)"
-      >
+        style="background: linear-gradient(90deg, #fe9a00 0%, #fbbc05 100%)">
         <p class="text-lg lg:text-3xl font-bold text-white">The Video Course</p>
         <p class="lg:ml-4 lg:text-3xl">
           teaches you every thing about modern cars
@@ -305,8 +283,7 @@
           <img
             class="w-full max-w-3xl h-fit"
             src="src/images/ignition-electrical/an-alternator.png"
-            alt="Alternator Diagram"
-          />
+            alt="Alternator Diagram" />
           <p class="text-2xl leading-14">
             Inside an alternator the belt-driven rotor becomes an electromagnet
             when current is fed to it. As the rotor revolves it generates a
@@ -315,28 +292,30 @@
         </div>
       </div>
 
-      <h2 class="text-4xl">How the alternator works</h2>
-
-      <div class="flex flex-col lg:flex-row gap-16">
-        <p class="text-2xl lg:w-3/5">
-          Moving a magnet past a closed loop of wire makes an electric current
-          flow in the wire. Imagine a loop of wire with a magnet inside it.<br />
-          The north pole of the magnet passes the top of the loop as the south
-          pole passes the bottom of it. Both passes make current flow in one
-          direction round the loop.<br />The poles move away, and current stops
-          flowing until the south pole reaches the top and the north pole the
-          bottom.<br />This makes current flow again, but in the opposite
-          direction.<br />A car alternator uses an electromagnet in order to
-          boost output of electric current.
-        </p>
+      <div class="flex flex-col lg:flex-row gap-16 mt-16">
+        <div>
+          <h2 class="text-4xl">How the alternator works</h2>
+          <p class="text-2xl">
+            Moving a magnet past a closed loop of wire makes an electric current
+            flow in the wire. Imagine a loop of wire with a magnet inside
+            it.<br />
+            The north pole of the magnet passes the top of the loop as the south
+            pole passes the bottom of it. Both passes make current flow in one
+            direction round the loop.<br />The poles move away, and current
+            stops
+            flowing until the south pole reaches the top and the north pole the
+            bottom.<br />This makes current flow again, but in the opposite
+            direction.<br />A car alternator uses an electromagnet in order to
+            boost output of electric current.
+          </p>
+        </div>
 
         <div class="flex flex-col justify-center lg:w-1/2">
           <h2 class="text-4xl">How the current flows in the alternator</h2>
           <img
-            class="w-full max-w-2xl"
+            class="w-full lg:w-md"
             src="src/images/ignition-electrical/how-the-current-flows-in-the-alternator.png"
-            alt="Current Flow in Alternator"
-          />
+            alt="Current Flow in Alternator" />
         </div>
       </div>
 
@@ -375,12 +354,11 @@
         <img
           class="w-full max-w-4xl"
           src="src/images/ignition-electrical/how-a-dynamo-works.png"
-          alt="Dynamo Diagram"
-        />
+          alt="Dynamo Diagram" />
       </div>
 
-      <p class="text-center text-lg mt-8">
-        <strong>Field windings</strong> inside the body are a dynamo's
+      <p class="text-2xl mt-8 text-center">
+        Field windings inside the body are a dynamo's
         electromagnet. Current is generated in the revolving armature.
       </p>
     </div>
@@ -392,14 +370,12 @@
           <!-- Brand -->
           <div>
             <div
-              class="flex items-center gap-2 text-white text-xl font-semibold mb-4"
-            >
+              class="flex items-center gap-2 text-white text-xl font-semibold mb-4">
               <span class="text-yellow-400">
                 <img
                   class="h-6.5"
                   src="src/images/HomePage/icons/Icon-5.svg"
-                  alt
-                />
+                  alt />
               </span>
               CarXray
             </div>
@@ -413,33 +389,27 @@
             <div class="flex gap-3">
               <a
                 href="#"
-                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition"
-              >
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
                 <img
                   class="h-6.5"
                   src="src/images/HomePage/icons/Icon-2.svg"
-                  alt
-                />
+                  alt />
               </a>
               <a
                 href="#"
-                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition"
-              >
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
                 <img
                   class="h-6.5"
                   src="src/images/HomePage/icons/Icon-1.svg"
-                  alt
-                />
+                  alt />
               </a>
               <a
                 href="#"
-                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition"
-              >
+                class="icon-container w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-lg hover:bg-zinc-800 transition">
                 <img
                   class="h-6.5 w-6.5 block"
                   src="src/images/HomePage/icons/Icon.svg"
-                  alt
-                />
+                  alt />
               </a>
             </div>
           </div>
@@ -447,36 +417,36 @@
           <!-- Learn -->
           <div>
             <h3 class="text-white text-lg font-semibold mb-4">Learn</h3>
-                        <ul class="space-y-4">
-                            <li><a href="engine.html"
-                                    class="hover:text-white">
-                                    Engine
-                                </a></li>
-                            <li><a href="fuel system.html"
-                                    class="hover:text-white">
-                                    Fuel System
-                                </a></li>
-                            <li><a href="ignition-electrical.html"
-                                    class="hover:text-white">
-                                    Ignition & Electrical
-                                </a></li>
-                            <li><a href="cooling and heating.html"
-                                    class="hover:text-white">
-                                    Cooling & Heating
-                                </a></li>
-                            <li><a href="Transmission-Drivetrain.html"
-                                    class="hover:text-white">
-                                    Transmission
-                                </a></li>
-                            <li><a href="braking-system.html"
-                                    class="hover:text-white">
-                                    Brakes
-                                </a></li>
-                            <li><a href="Steering-Suspension.html"
-                                    class="hover:text-white">
-                                    Suspension & Steering
-                                </a></li>
-                        </ul>
+            <ul class="space-y-4">
+              <li><a href="engine.html"
+                  class="hover:text-white">
+                  Engine
+                </a></li>
+              <li><a href="fuel system.html"
+                  class="hover:text-white">
+                  Fuel System
+                </a></li>
+              <li><a href="ignition-electrical.html"
+                  class="hover:text-white">
+                  Ignition & Electrical
+                </a></li>
+              <li><a href="cooling and heating.html"
+                  class="hover:text-white">
+                  Cooling & Heating
+                </a></li>
+              <li><a href="Transmission-Drivetrain.html"
+                  class="hover:text-white">
+                  Transmission
+                </a></li>
+              <li><a href="braking-system.html"
+                  class="hover:text-white">
+                  Brakes
+                </a></li>
+              <li><a href="Steering-Suspension.html"
+                  class="hover:text-white">
+                  Suspension & Steering
+                </a></li>
+            </ul>
           </div>
 
           <!-- Resources -->
@@ -510,8 +480,7 @@
 
         <!-- Bottom Bar -->
         <div
-          class="flex flex-col md:flex-row justify-between items-center gap-4"
-        >
+          class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© 2025 CarXray. Graduation Project.</p>
 
           <div class="flex gap-6">

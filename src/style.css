@@ -48,12 +48,33 @@ a {
 }
 
 .landing {
-  background-image: url(images/HomePage/\(°!°\)\ McLaren\ F1___\ 1.png);
-  /* min-height: 1220px; */
+  position: relative;
   min-height: calc(100vh - 72px);
+  overflow: hidden;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/HomePage/(°!°) McLaren F1___ 1.png");
   background-size: cover;
-  /* background: no-repeat; */
-  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .landing::before {
+    transform: rotate(90deg);
+    transform-origin: center;
+    width: 100vh;
+    height: 100vw;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
 }
 
 .ai-chatbot {
@@ -451,7 +472,6 @@ body .chat-header {
   border-radius: 16px;
   border: 1.014px solid rgba(130, 24, 26, 0.20);
   background: linear-gradient(90deg, #18181B 0%, #000 100%);
-  padding: 0px 20px 0 0;
 }
 
 .category-card span {

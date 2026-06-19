@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <link rel="icon" href="src/images/sport-car.png" type="image/x-icon">
-    <!-- Check auth immediately before page renders -->
-    <script>
+        <!-- Check auth immediately before page renders -->
+        <script>
         (function() {
             const token = localStorage.getItem("jwt");
             if (token) {
@@ -13,8 +13,8 @@
             }
         })();
     </script>
-    
-    <style>
+
+        <style>
         /* Hide guest buttons if authenticated */
         [data-auth="user"] #guestButtons,
         [data-auth="user"] #guestButtonsDesktop {
@@ -143,13 +143,23 @@
                             class="focus:outline-none w-full text-gray-400 h-10 text-2xl" />
                     </form>
                 </div>
-                <div class="sign-buttons flex flex-col gap-6 mb-12">
+                <div id="guestButtons"
+                    class="sign-buttons flex flex-col gap-6 mb-12">
                     <a href="login.html"
                         class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Sign
                         In</a>
                     <a href="signup.html"
                         class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Sign
                         Up</a>
+                </div>
+
+                <div id="userButtons"
+                    class="sign-buttons flex flex-col gap-6 mb-12">
+                    <a href="index.html" id="userNameMobile"
+                        class="rounded-xl py-4 text-center  border-gray-200 border text-gray-200 px-6">Hi,
+                        User</a>
+                    <a href="#" id="logoutBtnMobile"
+                        class="rounded-xl py-4 text-center  bg-gray-200 text-black px-6">Logout</a>
                 </div>
             </div>
         </nav>
@@ -209,13 +219,13 @@
             <h1
                 class="text-5xl font-bold text-primary mb-16 self-start ml-20">Categories</h1>
 
-            <div class="flex flex-col gap-8 w-9/12">
+            <div class="flex flex-col gap-8 w-10/12 lg:w-9/12">
                 <!-- Card1 -->
                 <a
                     href="engine.html"
-                    class="category-card flex flex-col md:flex-row rounded-2xl overflow-hidden">
+                    class="category-card md:pr-4 flex flex-col md:flex-row rounded-2xl overflow-hidden gap-4 lg:gap-12">
                     <!-- Image -->
-                    <div class="md:w-[45%] h-64 shrink-0 md:h-auto">
+                    <div class="w-full md:w-[45%] h-64 shrink-0 md:h-auto">
                         <img
                             src="src/images/categories/1engine.png"
                             alt="Engine"
@@ -224,7 +234,7 @@
 
                     <!-- Content -->
                     <div
-                        class="text-white flex flex-col ml-12 justify-around py-4">
+                        class="text-white flex flex-col justify-around py-4 px-6 md:px-0 gap-4">
                         <h2 class="text-3xl">Engine</h2>
 
                         <p class="text-2xl text-zinc-400">
@@ -244,9 +254,9 @@
                 <!-- Card2 -->
                 <a
                     href="fuel system.html"
-                    class="category-card flex flex-col md:flex-row rounded-2xl overflow-hidden">
+                    class="category-card md:pr-4 flex flex-col md:flex-row rounded-2xl overflow-hidden gap-4 lg:gap-12">
                     <!-- Image -->
-                    <div class="md:w-[45%] h-64 shrink-0 md:h-auto">
+                    <div class="w-full md:w-[45%] h-64 shrink-0 md:h-auto">
                         <img
                             src="./src/images/categories/2fuel.png"
                             alt="Engine"
@@ -255,7 +265,7 @@
 
                     <!-- Content -->
                     <div
-                        class="text-white flex flex-col ml-12 justify-around py-4">
+                        class="text-white flex flex-col justify-around py-4 px-6 md:px-0 gap-4">
                         <h2 class="text-3xl">Fuel System</h2>
 
                         <p class="text-2xl text-zinc-400">
@@ -274,9 +284,9 @@
                 <!-- Card3 -->
                 <a
                     href="ignition-electrical.html"
-                    class="category-card flex flex-col md:flex-row rounded-2xl overflow-hidden">
+                    class="category-card md:pr-4 flex flex-col md:flex-row rounded-2xl overflow-hidden gap-4 lg:gap-12">
                     <!-- Image -->
-                    <div class="md:w-[45%] h-64 shrink-0 md:h-auto">
+                    <div class="w-full md:w-[45%] h-64 shrink-0 md:h-auto">
                         <img
                             src="src/images/categories/3electrical.png"
                             alt="Engine"
@@ -285,7 +295,7 @@
 
                     <!-- Content -->
                     <div
-                        class="text-white flex flex-col ml-12 justify-around py-4">
+                        class="text-white flex flex-col justify-around py-4 px-6 md:px-0 gap-4">
                         <h2 class="text-3xl">Ignition & Electrical </h2>
 
                         <p class="text-2xl text-zinc-400">
@@ -304,9 +314,9 @@
                 <!-- Card4 -->
                 <a
                     href="cooling and heating.html"
-                    class="category-card flex flex-col md:flex-row rounded-2xl overflow-hidden">
+                    class="category-card md:pr-4 flex flex-col md:flex-row rounded-2xl overflow-hidden gap-4 lg:gap-12">
                     <!-- Image -->
-                    <div class="md:w-[45%] h-64 shrink-0 md:h-auto">
+                    <div class="w-full md:w-[45%] h-64 shrink-0 md:h-auto">
                         <img
                             src="src/images/categories/4cooling.png"
                             alt="Engine"
@@ -315,7 +325,7 @@
 
                     <!-- Content -->
                     <div
-                        class="text-white flex flex-col ml-12 justify-around py-4">
+                        class="text-white flex flex-col justify-around py-4 px-6 md:px-0 gap-4">
                         <h2 class="text-3xl">Cooling & Heating</h2>
 
                         <p class="text-2xl text-zinc-400">
@@ -333,9 +343,9 @@
                 <!-- Card5 -->
                 <a
                     href="./Transmission-Drivetrain.html"
-                    class="category-card flex flex-col md:flex-row rounded-2xl overflow-hidden">
+                    class="category-card md:pr-4 flex flex-col md:flex-row rounded-2xl overflow-hidden gap-4 lg:gap-12">
                     <!-- Image -->
-                    <div class="md:w-[45%] h-64 shrink-0 md:h-auto">
+                    <div class="w-full md:w-[45%] h-64 shrink-0 md:h-auto">
                         <img
                             src="src/images/categories/5Transmission.png"
                             alt="Engine"
@@ -344,7 +354,7 @@
 
                     <!-- Content -->
                     <div
-                        class="text-white flex flex-col ml-12 justify-around py-4">
+                        class="text-white flex flex-col justify-around py-4 px-6 md:px-0 gap-4">
                         <h2 class="text-3xl">Transmission & Drivetrain </h2>
 
                         <p class="text-2xl text-zinc-400">
@@ -361,9 +371,9 @@
                 <!-- Card6 -->
                 <a
                     href="Steering-Suspension.html"
-                    class="category-card flex flex-col md:flex-row rounded-2xl overflow-hidden">
+                    class="category-card md:pr-4 flex flex-col md:flex-row rounded-2xl overflow-hidden gap-4 lg:gap-12">
                     <!-- Image -->
-                    <div class="md:w-[45%] h-64 shrink-0 md:h-auto">
+                    <div class="w-full md:w-[45%] h-64 shrink-0 md:h-auto">
                         <img
                             src="src/images/categories/6Suspension.png"
                             alt="Engine"
@@ -372,7 +382,7 @@
 
                     <!-- Content -->
                     <div
-                        class="text-white flex flex-col ml-12 justify-around py-4">
+                        class="text-white flex flex-col justify-around py-4 px-6 md:px-0 gap-4">
                         <h2 class="text-3xl">Suspension & Steering</h2>
 
                         <p class="text-2xl text-zinc-400">
@@ -391,9 +401,9 @@
                 <!-- Card7 -->
                 <a
                     href="braking-system.html"
-                    class="category-card flex flex-col md:flex-row rounded-2xl overflow-hidden">
+                    class="category-card md:pr-4 flex flex-col md:flex-row rounded-2xl overflow-hidden gap-4 lg:gap-12">
                     <!-- Image -->
-                    <div class="md:w-[45%] h-64 shrink-0 md:h-auto">
+                    <div class="w-full md:w-[45%] h-64 shrink-0 md:h-auto">
                         <img
                             src="src/images/categories/7brake.png"
                             alt="Engine"
@@ -402,7 +412,7 @@
 
                     <!-- Content -->
                     <div
-                        class="text-white flex flex-col ml-12 justify-around py-4">
+                        class="text-white flex flex-col justify-around py-4 px-6 md:px-0 gap-4">
                         <h2 class="text-3xl"> Braking System</h2>
 
                         <p class="text-2xl text-zinc-400">
